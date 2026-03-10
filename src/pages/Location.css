@@ -1,0 +1,79 @@
+.location-page {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.location-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.location-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.location-hero p {
+    font-size: 1.2rem;
+    color: var(--text-main);
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+@media (max-width: 968px) {
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+}
+
+.info-icon {
+    background: rgba(102, 252, 241, 0.1);
+    color: var(--accent);
+    padding: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.map-container {
+    min-height: 500px;
+    padding: 8px;
+    /* So the iframe has a nice glass border around it */
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.map-container iframe {
+    border-radius: calc(var(--radius) - 8px);
+}

@@ -1,0 +1,15 @@
+{
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/pcparadiseofficial",
+    "instagram": "https://www.instagram.com/pcparadise.officiel/",
+    "whatsapp": "212610010182"
+  },
+  "aboutUs": {
+    "mainImage": "https://images.unsplash.com/photo-1531297172864-dd34cce46ad9?auto=format&fit=crop&q=80&w=800",
+    "description": "PC Paradise was founded with a singular vision: to curate the best premium technology products and provide an unparalleled shopping experience."
+  },
+  "seo": {
+    "defaultTitle": "PC Paradise | Premium Laptops & Electronics",
+    "defaultDescription": "Your one-stop destination for quality laptops and computers in Morocco."
+  }
+}

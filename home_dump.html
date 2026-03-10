@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon.ico">
+    <link rel="stylesheet" href="/static/css/Index.css">
+    
+    <title>PC Paradise</title>
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PB9C3TV7');
+    </script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body>
+        <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PB9C3TV7"
+                height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+<nav>
+    <div class="nav-left">
+        <a href="/"><img src="/static/img/logo.png" alt="logo"></a>
+    </div>
+    <div class="nav-right">
+        <a href="/about/">About</a>
+        <a target="_blank" href="https://www.instagram.com/pcparadise.officiel/">Instagram</a>
+        <a target="_blank" href="https://www.facebook.com/pcparadiseofficial">Facebook</a>
+        <a target="_blank" href="https://maps.app.goo.gl/LXcashFmbHPARxEKA">Location</a>
+        
+            <a href="/login/">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="25" height="25">
+  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+</svg>
+            </a>
+        
+    </div>
+</nav>
+
+    
+    
+    <!-- Promo Popup -->
+    <!-- Promo Popup Modal -->
+<!-- Debug: promo_message = None -->
+
+<!-- Debug: No promo message found or not active -->
+
+
+    
+    <!-- Hero section with filters and search -->
+    
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to PC Paradise</h1>
+        <p>Laptop Catalogue – Clear, Simple & Always Updated</p>
+    </div>
+</section>
+
+    <div class="filters">
+    <form id="filters-form" hx-get="/" hx-target="#cards" hx-trigger="change from:select" hx-indicator=".htmx-indicator" hx-push-url="true">
+        <div class="buttom">
+            <a class="promo-link" href="/promo/">Promotion</a>
+            <select name="brand" id="brand">
+  <option value="" selected>Brand (All)</option>
+
+  <option value="Acer">Acer</option>
+
+  <option value="Asus">Asus</option>
+
+  <option value="Dell">Dell</option>
+
+  <option value="HP">HP</option>
+
+  <option value="Huawei">Huawei</option>
+
+  <option value="Lenovo">Lenovo</option>
+
+  <option value="LG">LG</option>
+
+  <option value="Samsung">Samsung</option>
+
+  <option value="Vant">Vant</option>
+
+</select>
+            <select name="type" id="type">
+  <option value="" selected>Type (All)</option>
+
+  <option value="Premium ⭐">Premium ⭐</option>
+
+  <option value="Smart Choice">Smart Choice</option>
+
+  <option value="Desktop, Ecran, AIO">Desktop, Ecran, AIO</option>
+
+  <option value="Performance Series">Performance Series</option>
+
+  <option value="Business">Business</option>
+
+</select>
+            <select name="cpu" id="cpu">
+  <option value="" selected>CPU (All)</option>
+
+  <option value="i3">i3</option>
+
+  <option value="i5">i5</option>
+
+  <option value="i7">i7</option>
+
+  <option value="Ryzen5">Ryzen5</option>
+
+  <option value="Ryzen7">Ryzen7</option>
+
+  <option value="Ultra5">Ultra5</option>
+
+  <option value="Ultra7">Ultra7</option>
+
+</select>
+            <select name="gen" id="gen">
+  <option value="" selected>Gen (All)</option>
+
+  <option value="10th Generation">10th Generation</option>
+
+  <option value="11th Generation">11th Generation</option>
+
+  <option value="12th Generation">12th Generation</option>
+
+  <option value="13th Generation">13th Generation</option>
+
+  <option value="2025">2025</option>
+
+  <option value="6th Generation">6th Generation</option>
+
+  <option value="7th Generation">7th Generation</option>
+
+  <option value="8th Generation">8th Generation</option>
+
+  <option value="9th Generation">9th Generation</option>
+
+  <option value="Intel Core Ultra">Intel Core Ultra</option>
+
+  <option value="Ryzen 3000">Ryzen 3000</option>
+
+  <option value="Ryzen 5000">Ryzen 5000</option>
+
+  <option value="Ryzen 7000">Ryzen 7000</option>
+
+  <option value="Serie 5000+">Serie 5000+</option>
+
+</select>
+            <select name="price_range" id="price_range">
+  <option value="" selected>Price Range (All)</option>
+
+  <option value="5000dh ~ 6000dh">5000dh ~ 6000dh</option>
+
+  <option value="7000dh+">7000dh+</option>
+
+  <option value="3000dh ~ 4000dh">3000dh ~ 4000dh</option>
+
+  <option value="2000dh ~ 3000dh">2000dh ~ 3000dh</option>
+
+  <option value="4000dh ~ 5000dh">4000dh ~ 5000dh</option>
+
+  <option value="1000dh ~ 2000dh">1000dh ~ 2000dh</option>
+
+  <option value="Out of stock">Out of stock</option>
+
+  <option value="6000dh ~ 7000dh">6000dh ~ 7000dh</option>
+
+</select>
+            <a class="reset-btn" href="/">Reset</a>
+        </div>
+    </form>
+    <form id="search-form" method="get" action="/" class="search-form">
+        <input type="hidden" name="brand" id="search-hidden-brand" value="">
+        <input type="hidden" name="type" id="search-hidden-type" value="">
+        <input type="hidden" name="cpu" id="search-hidden-cpu" value="">
+        <input type="hidden" name="gen" id="search-hidden-gen" value="">
+        <input type="hidden" name="price_range" id="search-hidden-price_range" value="">
+        <div class="top">
+            <div class="search-wrapper">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input class="search" type="text" name="search" placeholder="Search..." value="" />
+                <button type="submit" class="search-button">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script id="filter-records" type="application/json">[{"brand": "Samsung", "type": "Premium \u2b50", "cpu": "i5", "gen": "12th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i7", "gen": "13th Generation", "price_range": "7000dh+"}, {"brand": "LG", "type": "Premium \u2b50", "cpu": "Ultra7", "gen": "Intel Core Ultra", "price_range": "7000dh+"}, {"brand": "Vant", "type": "Smart Choice", "cpu": "i5", "gen": "12th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "Lenovo", "type": "Desktop, Ecran, AIO", "cpu": "i5", "gen": "7th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "Huawei", "type": "Smart Choice", "cpu": "Ryzen5", "gen": "Ryzen 3000", "price_range": "2000dh ~ 3000dh"}, {"brand": "Acer", "type": "Smart Choice", "cpu": "i7", "gen": "11th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "Asus", "type": "Performance Series", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Asus", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Lenovo", "type": "Premium \u2b50", "cpu": "i5", "gen": "10th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "Acer", "type": "Smart Choice", "cpu": "", "gen": "2025", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i7", "gen": "8th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Desktop, Ecran, AIO", "cpu": "i5", "gen": "7th Generation", "price_range": "1000dh ~ 2000dh"}, {"brand": "HP", "type": "Desktop, Ecran, AIO", "cpu": "", "gen": "2025", "price_range": "1000dh ~ 2000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i5", "gen": "8th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "Lenovo", "type": "Desktop, Ecran, AIO", "cpu": "i5", "gen": "6th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "HP", "type": "Desktop, Ecran, AIO", "cpu": "i5", "gen": "6th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i5", "gen": "10th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "Ryzen5", "gen": "Serie 5000+", "price_range": "2000dh ~ 3000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i5", "gen": "11th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "Lenovo", "type": "Business", "cpu": "i5", "gen": "12th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i5", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Samsung", "type": "Premium \u2b50", "cpu": "i5", "gen": "13th Generation", "price_range": "Out of stock"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i5", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Smart Choice", "cpu": "i7", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i7", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i7", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Smart Choice", "cpu": "i7", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Asus", "type": "Smart Choice", "cpu": "i7", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i7", "gen": "12th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Lenovo", "type": "Business", "cpu": "i5", "gen": "13th Generation", "price_range": "Out of stock"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i7", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Dell", "type": "Desktop, Ecran, AIO", "cpu": "i5", "gen": "11th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i5", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i7", "gen": "12th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i5", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i7", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "Ultra5", "gen": "Intel Core Ultra", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i7", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "Ultra5", "gen": "Intel Core Ultra", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "Ultra5", "gen": "Intel Core Ultra", "price_range": "6000dh ~ 7000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i7", "gen": "13th Generation", "price_range": "6000dh ~ 7000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "Ultra5", "gen": "Intel Core Ultra", "price_range": "6000dh ~ 7000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "Ultra5", "gen": "Intel Core Ultra", "price_range": "6000dh ~ 7000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i7", "gen": "13th Generation", "price_range": "6000dh ~ 7000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "Ultra5", "gen": "Intel Core Ultra", "price_range": "6000dh ~ 7000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "Ultra5", "gen": "Intel Core Ultra", "price_range": "6000dh ~ 7000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "Ultra7", "gen": "Intel Core Ultra", "price_range": "7000dh+"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "13th Generation", "price_range": "6000dh ~ 7000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Lenovo", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "Ultra5", "gen": "Intel Core Ultra", "price_range": "6000dh ~ 7000dh"}, {"brand": "Dell", "type": "Performance Series", "cpu": "i5", "gen": "11th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i5", "gen": "13th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "Lenovo", "type": "Premium \u2b50", "cpu": "i5", "gen": "10th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "Lenovo", "type": "Smart Choice", "cpu": "Ryzen5", "gen": "Ryzen 3000", "price_range": "2000dh ~ 3000dh"}, {"brand": "Lenovo", "type": "Business", "cpu": "Ryzen5", "gen": "Ryzen 5000", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "11th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "Lenovo", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i7", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i7", "gen": "13th Generation", "price_range": "7000dh+"}, {"brand": "Lenovo", "type": "Business", "cpu": "i7", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i7", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Lenovo", "type": "Premium \u2b50", "cpu": "i7", "gen": "11th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "Ryzen5", "gen": "Ryzen 7000", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "Ryzen5", "gen": "Ryzen 5000", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "Ryzen7", "gen": "Ryzen 5000", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i7", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "Ultra5", "gen": "Intel Core Ultra", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i7", "gen": "11th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "12th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Performance Series", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "Lenovo", "type": "Smart Choice", "cpu": "i7", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Lenovo", "type": "Smart Choice", "cpu": "i7", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Lenovo", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Lenovo", "type": "Smart Choice", "cpu": "i7", "gen": "13th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "Lenovo", "type": "Premium \u2b50", "cpu": "Ultra7", "gen": "Intel Core Ultra", "price_range": "7000dh+"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "11th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i5", "gen": "12th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i7", "gen": "11th Generation", "price_range": "Out of stock"}, {"brand": "Lenovo", "type": "Premium \u2b50", "cpu": "Ultra7", "gen": "Intel Core Ultra", "price_range": "7000dh+"}, {"brand": "Lenovo", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "LG", "type": "Premium \u2b50", "cpu": "i7", "gen": "12th Generation", "price_range": "5000dh ~ 6000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i7", "gen": "13th Generation", "price_range": "7000dh+"}, {"brand": "Dell", "type": "Premium \u2b50", "cpu": "i7", "gen": "9th Generation", "price_range": "6000dh ~ 7000dh"}, {"brand": "Vant", "type": "Smart Choice", "cpu": "i5", "gen": "12th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "Asus", "type": "Performance Series", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Huawei", "type": "Smart Choice", "cpu": "Ryzen5", "gen": "Ryzen 3000", "price_range": "2000dh ~ 3000dh"}, {"brand": "Acer", "type": "Smart Choice", "cpu": "i7", "gen": "11th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "Asus", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Asus", "type": "Premium \u2b50", "cpu": "Ryzen7", "gen": "Ryzen 7000", "price_range": "Out of stock"}, {"brand": "Acer", "type": "Smart Choice", "cpu": "", "gen": "2025", "price_range": "4000dh ~ 5000dh"}, {"brand": "Acer", "type": "Smart Choice", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Lenovo", "type": "Desktop, Ecran, AIO", "cpu": "i3", "gen": "7th Generation", "price_range": "1000dh ~ 2000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i5", "gen": "11th Generation", "price_range": "3000dh ~ 4000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "Ryzen7", "gen": "Serie 5000+", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Premium \u2b50", "cpu": "i7", "gen": "11th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "HP", "type": "Desktop, Ecran, AIO", "cpu": "i5", "gen": "6th Generation", "price_range": "2000dh ~ 3000dh"}, {"brand": "HP", "type": "Smart Choice", "cpu": "i7", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Samsung", "type": "Premium \u2b50", "cpu": "i7", "gen": "12th Generation", "price_range": "4000dh ~ 5000dh"}, {"brand": "Asus", "type": "Performance Series", "cpu": "i5", "gen": "13th Generation", "price_range": "4000dh ~ 5000dh"}]</script>
+<script>
+    (function () {
+        const brandSelect = document.getElementById("brand");
+        const genSelect = document.getElementById("gen");
+        const typeSelect = document.getElementById("type");
+        const cpuSelect = document.getElementById("cpu");
+        const searchForm = document.getElementById("search-form");
+        const filterForm = document.getElementById("filters-form");
+        const dataElement = document.getElementById("filter-records");
+        const priceSelect = document.getElementById("price_range");
+        const searchHidden = {
+            brand: document.getElementById("search-hidden-brand"),
+            type: document.getElementById("search-hidden-type"),
+            cpu: document.getElementById("search-hidden-cpu"),
+            gen: document.getElementById("search-hidden-gen"),
+            price_range: document.getElementById("search-hidden-price_range"),
+        };
+
+        if (!brandSelect || !typeSelect || !cpuSelect || !genSelect || !priceSelect || !dataElement) {
+            return;
+        }
+        if (brandSelect.dataset.dynamicFiltersInitialised === "true") {
+            return;
+        }
+        brandSelect.dataset.dynamicFiltersInitialised = "true";
+
+        const records = JSON.parse(dataElement.textContent || "[]");
+        if (!Array.isArray(records)) {
+            return;
+        }
+
+        const selects = {
+            brand: brandSelect,
+            type: typeSelect,
+            cpu: cpuSelect,
+            gen: genSelect,
+            price_range: priceSelect,
+        };
+
+        const defaultOptions = {};
+        Object.entries(selects).forEach(([key, select]) => {
+            const firstOption = select ? select.options[0] : null;
+            defaultOptions[key] = firstOption
+                ? { text: firstOption.textContent, value: firstOption.value }
+                : { text: "", value: "" };
+        });
+
+        const order = ["brand", "type", "cpu", "gen", "price_range"];
+        const collator = new Intl.Collator(undefined, { sensitivity: "base" });
+
+        function syncSearchHidden() {
+            order.forEach((key) => {
+                if (selects[key] && searchHidden[key]) {
+                    searchHidden[key].value = selects[key].value || "";
+                }
+            });
+        }
+
+        function getSelections() {
+            const result = {};
+            order.forEach((key) => {
+                const select = selects[key];
+                result[key] = select ? select.value || "" : "";
+            });
+            return result;
+        }
+
+        function valuesForKey(key, selections) {
+            return records
+                .filter((record) => {
+                    return order.every((otherKey) => {
+                        if (otherKey === key) {
+                            return true;
+                        }
+                        const selected = selections[otherKey];
+                        if (!selected) {
+                            return true;
+                        }
+                        return (record[otherKey] || "") === selected;
+                    });
+                })
+                .map((record) => record[key])
+                .filter((value) => value && value.trim() !== "");
+        }
+
+        function setOptions(select, values, defaultOption, preferredValue) {
+            select.innerHTML = "";
+            let matched = false;
+
+            if (defaultOption) {
+                const option = new Option(defaultOption.text, defaultOption.value);
+                if (preferredValue && preferredValue === defaultOption.value) {
+                    option.selected = true;
+                    matched = true;
+                }
+                select.appendChild(option);
+            }
+
+            values.forEach((value) => {
+                const option = new Option(value, value);
+                if (preferredValue && value === preferredValue) {
+                    option.selected = true;
+                    matched = true;
+                }
+                select.appendChild(option);
+            });
+
+            if (!matched) {
+                select.selectedIndex = 0;
+            }
+        }
+
+        function rebuildOptions() {
+            let selections = getSelections();
+            order.forEach((key) => {
+                const select = selects[key];
+                if (!select) {
+                    return;
+                }
+                const preferred = selections[key];
+                const rawValues = valuesForKey(key, selections);
+                const uniqueValues = Array.from(new Set(rawValues));
+
+                let values;
+                if (key === "brand") {
+                    const counts = new Map();
+                    rawValues.forEach((v) => counts.set(v, (counts.get(v) || 0) + 1));
+                    values = uniqueValues.sort((a, b) => {
+                        const ca = counts.get(a) || 0;
+                        const cb = counts.get(b) || 0;
+                        if (cb !== ca) return cb - ca; // desc by count
+                        return collator.compare(a, b); // tiebreaker by name
+                    });
+                } else if (key === "price_range") {
+                    // Sort price ranges by extracting the first number from each range
+                    values = uniqueValues.sort((a, b) => {
+                        // Extract first number from price range string (e.g., "1000-2000" -> 1000)
+                        const extractFirstNumber = (str) => {
+                            if (!str) return 0;
+                            const match = str.match(/\d+/);
+                            return match ? parseInt(match[0], 10) : 0;
+                        };
+                        const numA = extractFirstNumber(a);
+                        const numB = extractFirstNumber(b);
+                        if (numA !== numB) return numA - numB; // Sort ascending (lower to higher)
+                        return collator.compare(a, b); // Tiebreaker: alphabetical if same number
+                    });
+                } else {
+                    values = uniqueValues.sort(collator.compare);
+                }
+                setOptions(select, values, defaultOptions[key], preferred);
+                selections = getSelections();
+            });
+        }
+
+        if (records.length === 0) {
+            rebuildOptions();
+            return;
+        }
+
+        rebuildOptions();
+
+        order.forEach((key) => {
+            const select = selects[key];
+            if (!select) {
+                return;
+            }
+            select.addEventListener("change", () => {
+                rebuildOptions();
+                syncSearchHidden();
+            });
+        });
+
+        syncSearchHidden();
+
+        if (searchForm) {
+            searchForm.addEventListener("submit", () => {
+                syncSearchHidden();
+            });
+        }
+
+        const searchInput = searchForm ? searchForm.querySelector(".search") : null;
+        if (searchInput && filterForm) {
+            searchInput.addEventListener("focus", () => {
+                const activeFilters = order.filter((key) => selects[key] && selects[key].value);
+                if (!activeFilters.length) {
+                    return;
+                }
+                activeFilters.forEach((key) => {
+                    const select = selects[key];
+                    if (!select) {
+                        return;
+                    }
+                    select.selectedIndex = 0;
+                });
+                rebuildOptions();
+                syncSearchHidden();
+                const primarySelect =
+                    selects.brand ||
+                    selects.type ||
+                    selects.cpu ||
+                    selects.gen ||
+                    selects.price_range;
+                if (primarySelect) {
+                    primarySelect.dispatchEvent(new Event("change", { bubbles: true }));
+                }
+            });
+        }
+    })();
+</script>
+
+    <!-- Product Cards (HTMX will replace this content) -->
+    <div id="cards">
+        
+
+
+
+<div class="cards">
+    
+    <div class="card">
+        
+        <a href="/product/samsung-galaxy-pro--pcp-0001/">
+            <img 
+                src="https://ressi.ru/upload/iblock/ced/7ptvxdr03hehqop9omle0ren485zqog0/5583a4296e5295be8c18b72935c6727d.jpg" 
+                alt="Samsung Galaxy PRO"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>Samsung Galaxy PRO</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">OLED premium élégant mobilité fluide.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        i5
+                         12th Generation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">16GB / 512GB SSD / OLED</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">14,1″ OLED</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status in-stock">
+                    <span class="status-dot online"></span>
+                    <span>3 in stock</span>
+                </div>
+                <a href="/product/samsung-galaxy-pro--pcp-0001/" class="dtl"><strong>Order Now</strong></a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/hp-dragonfly-g4--pcp-0002/">
+            <img 
+                src="https://www.hp.com/fr-fr/shop/Html/Merch/Images/8A461EA-ABF_9_1750x1285.jpg" 
+                alt="HP Dragonfly G4"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>HP Dragonfly G4</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Ultra premium ultra léger exécutif.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        i7
+                         13th Generation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">32GB / 512GB SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">13,5″</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/hp-dragonfly-g4--pcp-0002/" class="dtl">
+                    <strong>9,450.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/lg-gram-16-superx--pcp-0013/">
+            <img 
+                src="https://www.lg.com/content/dam/channel/wcms/uk/images/laptops/16Z90Q-K_AR56A1_EEUK_UK_C/gallery/large02.jpg" 
+                alt="LG Gram 16 SuperX"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>LG Gram 16 SuperX</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Ultraportable premium ultra léger haut de gamme.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        Ultra7
+                         Intel Core Ultra
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">16Gb DDR5 RAM 512SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">16,0″ OLED 2K</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/lg-gram-16-superx--pcp-0013/" class="dtl">
+                    <strong>8,900.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/vant-laptop--pcp-0004/">
+            <img 
+                src="https://www.vantpc.es/wp-content/uploads/2023/12/Mesa-de-trabajo-5.jpg" 
+                alt="VANT Laptop"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>VANT Laptop</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Simple moderne usage courant.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        i5
+                         12th Generation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">8GB / 512GB SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">15,6″</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/vant-laptop--pcp-0004/" class="dtl">
+                    <strong>3,299.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/all-in-one-lenovo-7th-generation--pcp-0018/">
+            <img 
+                src="https://media.tera.ma/wp-content/uploads/2025/03/Lenovo-21.5-LED-Thinkcentre-Tiny-in-One-22-4.jpg" 
+                alt="All In One - Lenovo (7th Generation)"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>All In One - Lenovo (7th Generation)</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Tout-en-un élégant gain d’espace bureau.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        i5
+                         7th Generation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">8Gb RAM 256SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">Lenovo 22p Framless</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/all-in-one-lenovo-7th-generation--pcp-0018/" class="dtl">
+                    <strong>2,650.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/huawei-laptop--pcp-0006/">
+            <img 
+                src="https://avatars.mds.yandex.net/get-mpic/11483862/2a0000018fbf644b2708f1315d9d0da9e35b/orig" 
+                alt="Huawei Laptop"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>Huawei Laptop</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Design élégant usage simple.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        Ryzen5
+                         Ryzen 3000
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">8GB / 256GB SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">15,6″</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/huawei-laptop--pcp-0006/" class="dtl">
+                    <strong>2,799.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/acer-aspire--pcp-0007/">
+            <img 
+                src="https://media.tera.ma/wp-content/uploads/2025/03/ACER-Aspire-A515-56-72DA-i7.jpg" 
+                alt="Acer Aspire"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>Acer Aspire</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Polyvalent équilibré usage quotidien.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        i7
+                         11th Generation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">8GB / 512GB SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">15,6″</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/acer-aspire--pcp-0007/" class="dtl">
+                    <strong>3,499.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/asus-expertbook--pcp-0008/">
+            <img 
+                src="https://www.mediazone.ma/product/images/15077-n1ZXDcLI/asus-expertbook-b9400-i7-11eme-16go-512go-ssd-14p-fhd-start-black-maroc.webp" 
+                alt="Asus ExpertBook"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>Asus ExpertBook</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Business léger fiable élégant.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        i7
+                         11th Generation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">16GB / 512GB SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">15,6″</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/asus-expertbook--pcp-0008/" class="dtl">
+                    <strong>4,199.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/asus-vivobook--pcp-0009/">
+            <img 
+                src="https://laptopcare.lk/wp-content/uploads/2024/08/Untitled-design-1-2-1.jpg" 
+                alt="Asus VivoBook"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>Asus VivoBook</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Portable fin polyvalent quotidien.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        i5
+                         13th Generation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">16GB / 512GB SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">15,6″</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/asus-vivobook--pcp-0009/" class="dtl">
+                    <strong>4,199.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/lenovo-thinkpad-t14s--pcp-0010/">
+            <img 
+                src="https://www.lenovoarvutid.ee/wp-content/uploads/2021/05/16_Thinkpad_T14s_Gen_2_Tour_Birdseye_B_C_Cover.png" 
+                alt="Lenovo ThinkPad T14s"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>Lenovo ThinkPad T14s</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Ultraléger premium conçu pour mobilité intensive.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        i5
+                         10th Generation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">16Gb RAM 512SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">14,0″ FHD IPS</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/lenovo-thinkpad-t14s--pcp-0010/" class="dtl">
+                    <strong>2,950.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/acer-swift-sf314-61--pcp-0011/">
+            <img 
+                src="https://ressi.ru/upload/iblock/358/zrf906dlheo8xdv6nqv0e6j7uvbovej1/28f88eb3942eb45e1e52d2b136d17123.jpg" 
+                alt="Acer Swift SF314-61"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>Acer Swift SF314-61</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Ultrabook léger moderne élégant.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        
+                         2025
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">16GB DDR5 / 1TB SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">14,0″</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/acer-swift-sf314-61--pcp-0011/" class="dtl">
+                    <strong>4,599.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <a href="/product/dell-latitude-5400--pcp-0012/">
+            <img 
+                src="https://bm.market/upload-files/apl-1750202591ac39b5bd8616faac5189c112f9a794baee486ad1.jpg" 
+                alt="Dell Latitude 5400"
+                onerror="this.onerror=null;this.src='/static/img/logo.png';"
+            >
+        </a>
+
+        <div class="card-buttom">
+            <h3>Dell Latitude 5400</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">Portable professionnel robuste et fiable pour travail quotidien.</td>
+                </tr>
+                <tr>
+                    <td class="label">CPU:</td>
+                    <td class="value">
+                        i7
+                         8th Generation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Config:</td>
+                    <td class="value">8Gb RAM 256SSD</td>
+                </tr>
+                <tr>
+                    <td class="label">Screen:</td>
+                    <td class="value">14,0″ FHD IPS</td>
+                </tr>
+                <tr>
+                    <td class="label">Reviews:</td>
+                    <td class="value">⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+
+            
+                <div class="stock-status limited">
+                    <span>Available in stock</span>
+                    <span class="status-dot online"></span>
+                </div>
+                <a href="/product/dell-latitude-5400--pcp-0012/" class="dtl">
+                    <strong>2,500.00 DHs</strong>
+                </a>
+
+            
+        </div>
+    </div>
+    
+</div>
+
+
+<div class="pagination">
+    <div class="pagination-info">
+        Showing 1-12 of 127 products
+    </div>
+    
+    <div class="pagination-controls">
+        
+            <span class="pagination-btn pagination-btn--disabled">Previous</span>
+        
+
+        
+            
+                <span class="pagination-btn pagination-btn--current">1</span>
+            
+        
+            
+                <a href="?page=2" class="pagination-btn">2</a>
+            
+        
+            
+                <a href="?page=3" class="pagination-btn">3</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+
+        
+            <a href="?page=2" class="pagination-btn pagination-btn--next">
+                Next
+            </a>
+        
+    </div>
+</div>
+
+
+
+
+    </div>
+
+    
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>PC Paradise</h3>
+            <p>Your one-stop destination for quality laptops and computers.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-links">
+                <a target="_blank" href="https://www.instagram.com/pcparadise.officiel/" class="social-link">
+                    <img src="/static/img/Instagram.png" alt="Instagram">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/pcparadiseofficial" class="social-link">
+                    <img src="/static/img/Facebook.png" alt="Facebook">
+                </a>
+                 <a target="_blank" href="https://wa.me/212610010182" class="social-link">
+                    <img src="/static/img/WhatsApp.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+<p>&copy; 2026 PC Paradise. S.A.R.L</p></div>
+</footer>
+
+
+    <script src="/static/js/htmx.min.js"></script>
+</body>
+</html>
