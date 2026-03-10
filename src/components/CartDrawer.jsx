@@ -62,7 +62,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                             {cart.map(item => (
                                 <div key={item.id} className="cart-item">
                                     <img
-                                        src={item.image || 'https://placehold.co/60x60?text=IMG'}
+                                        src={api.resolveMediaUrl(item.image) || 'https://placehold.co/60x60?text=IMG'}
                                         alt={item.title}
                                         className="cart-item-img"
                                         onError={e => { e.target.src = 'https://placehold.co/60x60?text=IMG'; }}

@@ -9,7 +9,6 @@ const AdminSettings = () => {
         seo: { defaultTitle: '', defaultDescription: '' },
         contactInfo: { address: '', phone1: '', phone2: '', email1: '', email2: '', hours: '', mapUrl: '' }
     });
-    const [authData, setAuthData] = useState({ currentPassword: '', newUsername: '', newPassword: '' });
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
@@ -41,20 +40,10 @@ const AdminSettings = () => {
         setSaving(true);
         try {
             await api.updateSettings(settings);
-
-            if (authData.currentPassword) {
-                await api.updateAuth(authData.currentPassword, authData.newUsername, authData.newPassword);
-                setAuthData({ currentPassword: '', newUsername: '', newPassword: '' });
-            }
-
             showToast('Settings saved successfully!');
         } catch (err) {
             console.error(err);
-            if (err.response?.status === 401) {
-                alert('Failed to update credentials: Incorrect current password.');
-            } else {
-                alert('Error saving settings.');
-            }
+            alert('Error saving settings.');
         }
         setSaving(false);
     };
@@ -185,28 +174,29 @@ const AdminSettings = () => {
                             />
                         </div>
                         {settings.aboutUs.mainImage && (
-                            <img src={settings.aboutUs.mainImage} alt="About Us Preview" className="admin-image-preview mt-2" />
+                            <img src={api.resolveMediaUrl(settings.aboutUs.mainImage)} alt="About Us Preview" className="admin-image-preview mt-2" />
                         )}
+                    </div>
+                    <div className="form-group">
+                        <label>About Description</label>
+                        <textarea
+                            className="admin-textarea"
+                            rows="4"
+                            value={settings.aboutUs.description}
+                            onChange={e => handleChange('aboutUs', 'description', e.target.value)}
+                        />
                     </div>
                 </div>
 
                 <div className="settings-section" style={{ gridColumn: '1 / -1', border: '1px solid rgba(255, 118, 118, 0.3)' }}>
                     <h3 style={{ color: '#ff7676' }}>Admin Credentials</h3>
                     <p style={{ fontSize: '0.85rem', color: '#ff7676', marginBottom: '16px' }}>
-                        To change your admin username or password, you must enter your current password to verify your identity.
+                        Admin access is managed only by the server environment variables <strong>ADMIN_USER</strong> and <strong>ADMIN_PASS</strong>.
                     </p>
-                    <div className="form-row-2">
-                        <div className="form-group">
-                            <label>Current Password *</label>
-                            <input type="password" className="admin-input" value={authData.currentPassword} onChange={e => setAuthData({ ...authData, currentPassword: e.target.value })} placeholder="Required to make changes" />
-                        </div>
-                        <div className="form-group">
-                            <label>New Username</label>
-                            <input type="text" className="admin-input" value={authData.newUsername} onChange={e => setAuthData({ ...authData, newUsername: e.target.value })} placeholder="Leave blank to keep current" />
-                        </div>
-                        <div className="form-group" style={{ gridColumn: '1 / -1' }}>
-                            <label>New Password</label>
-                            <input type="password" className="admin-input" value={authData.newPassword} onChange={e => setAuthData({ ...authData, newPassword: e.target.value })} placeholder="Leave blank to keep current password" />
+                    <div className="form-group">
+                        <label>Deployment note</label>
+                        <div className="admin-input" style={{ minHeight: 'auto', lineHeight: 1.5 }}>
+                            Update admin credentials from Coolify or your environment file, then redeploy the admin service.
                         </div>
                     </div>
                 </div>

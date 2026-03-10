@@ -68,7 +68,7 @@ const ProductDetail = () => {
                 <title>{product.title} | PC Paradise</title>
                 <meta name="description" content={product.description?.substring(0, 160)} />
                 <meta property="og:title" content={product.title} />
-                <meta property="og:image" content={mainImage} />
+                <meta property="og:image" content={api.resolveMediaUrl(mainImage)} />
             </Helmet>
 
             <Link to="/catalog" className="back-link">
@@ -83,7 +83,7 @@ const ProductDetail = () => {
                             <div className="detail-promo-badge">{t('product.promo')}</div>
                         )}
                         <img
-                            src={mainImage}
+                            src={api.resolveMediaUrl(mainImage)}
                             alt={product.title}
                             onError={e => { e.target.src = 'https://placehold.co/600x400?text=No+Image'; }}
                         />
@@ -99,7 +99,7 @@ const ProductDetail = () => {
                                     onClick={() => setMainImage(img)}
                                 >
                                     <img
-                                        src={img}
+                                        src={api.resolveMediaUrl(img)}
                                         alt={`view ${idx + 1}`}
                                         onError={e => { e.target.src = 'https://placehold.co/100x80?text=NA'; }}
                                     />
@@ -180,7 +180,7 @@ const ProductDetail = () => {
 
                     <div className="lightbox-img-wrapper" onClick={e => e.stopPropagation()}>
                         <img
-                            src={images[lightboxIndex]}
+                            src={api.resolveMediaUrl(images[lightboxIndex])}
                             alt={`${product.title} image ${lightboxIndex + 1}`}
                             onError={e => { e.target.src = 'https://placehold.co/800x600?text=No+Image'; }}
                         />

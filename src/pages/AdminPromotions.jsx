@@ -93,7 +93,7 @@ const AdminPromotions = () => {
                         ) : (
                             promoProducts.map(p => (
                                 <div key={p.id} className="admin-promo-item glass-panel" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px' }}>
-                                    <img src={p.images?.[0] || 'https://placehold.co/50x50'} alt={p.title} style={{ width: '50px', height: '50px', borderRadius: '4px', objectFit: 'cover' }} />
+                                    <img src={api.resolveMediaUrl(p.images?.[0]) || 'https://placehold.co/50x50'} alt={p.title} style={{ width: '50px', height: '50px', borderRadius: '4px', objectFit: 'cover' }} />
                                     <div style={{ flex: 1 }}>
                                         <div style={{ fontWeight: '600', fontSize: '0.9rem' }}>{p.title}</div>
                                         <div style={{ fontSize: '0.8rem', color: 'var(--accent)' }}>{p.discountPrice} <span style={{ textDecoration: 'line-through', color: 'var(--text-muted)', marginLeft: '4px' }}>{p.price}</span></div>
@@ -126,7 +126,7 @@ const AdminPromotions = () => {
                         {nonPromoProducts.slice(0, 10).map(p => (
                             <div key={p.id} className="admin-promo-item glass-panel" style={{ display: 'flex', flexDirection: 'column', gap: '8px', padding: '12px' }}>
                                 <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                                    <img src={p.images?.[0] || 'https://placehold.co/50x50'} alt={p.title} style={{ width: '40px', height: '40px', borderRadius: '4px', objectFit: 'cover' }} />
+                                    <img src={api.resolveMediaUrl(p.images?.[0]) || 'https://placehold.co/50x50'} alt={p.title} style={{ width: '40px', height: '40px', borderRadius: '4px', objectFit: 'cover' }} />
                                     <div style={{ fontWeight: '500', fontSize: '0.9rem' }}>{p.title}</div>
                                 </div>
                                 <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginTop: '4px' }}>

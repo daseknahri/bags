@@ -40,7 +40,7 @@ const Blog = () => {
                 {blogs.map(post => (
                     <Link to={`/blog/${post.slug}`} key={post.id} className="blog-card glass-panel">
                         <div className="blog-image">
-                            <img src={post.image || '/placeholder.png'} alt={post.title} />
+                            <img src={api.resolveMediaUrl(post.image) || '/placeholder.png'} alt={post.title} />
                         </div>
                         <div className="blog-content">
                             <h2>{post.title}</h2>

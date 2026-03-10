@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ShoppingCart, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
+import { api } from '../api';
 import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
@@ -25,7 +26,7 @@ const ProductCard = ({ product }) => {
                         <div className="promo-badge">{t('product.sale')}</div>
                     )}
                     <img
-                        src={product.images[0] || '/placeholder.png'}
+                        src={api.resolveMediaUrl(product.images?.[0]) || '/placeholder.png'}
                         alt={product.title}
                         loading="lazy"
                         onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=No+Image' }}

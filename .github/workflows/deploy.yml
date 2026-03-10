@@ -1,0 +1,63 @@
+name: Deploy to Coolify
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build frontend
+        run: npm run build
+
+      - name: Validate server files
+        run: |
+          node --check website-server.cjs
+          node --check admin-server.cjs
+          node --check server/site-store.cjs
+          node --check server/server-common.cjs
+
+  deploy-production:
+    needs: validate
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Coolify production deploy
+        run: |
+          if [ -z "${{ secrets.COOLIFY_WEBHOOK_PROD }}" ] || [ -z "${{ secrets.COOLIFY_TOKEN_PROD }}" ]; then
+            echo "COOLIFY_WEBHOOK_PROD or COOLIFY_TOKEN_PROD is not set. Skipping production deploy."
+            exit 0
+          fi
+          curl --fail --silent --show-error --max-time 30 \
+            -H "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN_PROD }}" \
+            "${{ secrets.COOLIFY_WEBHOOK_PROD }}"
+
+  deploy-staging:
+    needs: validate
+    if: github.ref == 'refs/heads/staging'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Coolify staging deploy
+        run: |
+          if [ -z "${{ secrets.COOLIFY_WEBHOOK_STAGING }}" ] || [ -z "${{ secrets.COOLIFY_TOKEN_STAGING }}" ]; then
+            echo "COOLIFY_WEBHOOK_STAGING or COOLIFY_TOKEN_STAGING is not set. Skipping staging deploy."
+            exit 0
+          fi
+          curl --fail --silent --show-error --max-time 30 \
+            -H "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN_STAGING }}" \
+            "${{ secrets.COOLIFY_WEBHOOK_STAGING }}"

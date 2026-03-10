@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { api } from '../api';
 import './About.css';
 
 const About = () => {
+    const [aboutUs, setAboutUs] = useState({
+        mainImage: 'https://images.unsplash.com/photo-1531297172864-dd34cce46ad9?auto=format&fit=crop&q=80&w=800',
+        description: 'PC Paradise was founded with a singular vision: to curate the best premium technology products and provide an unparalleled shopping experience.'
+    });
+
+    useEffect(() => {
+        api.getSettings().then((settings) => {
+            if (settings?.aboutUs) {
+                setAboutUs((current) => ({
+                    ...current,
+                    ...settings.aboutUs
+                }));
+            }
+        }).catch(() => { });
+    }, []);
+
     return (
         <div className="about-page container animate-fade-in">
             <div className="about-hero">
@@ -13,9 +30,7 @@ const About = () => {
                 <div className="about-text glass-panel">
                     <h2>Our Story</h2>
                     <p>
-                        PC Paradise was founded with a singular vision: to curate the best premium technology products
-                        and provide an unparalleled shopping experience. What started as a small boutique for high-end
-                        laptops has grown into a comprehensive destination for professionals, gamers, and tech enthusiasts.
+                        {aboutUs.description}
                     </p>
                     <p>
                         We believe that the devices you use every day should be beautiful, powerful, and reliable.
@@ -26,7 +41,7 @@ const About = () => {
 
                 <div className="about-image glass-panel">
                     <img
-                        src="https://images.unsplash.com/photo-1531297172864-dd34cce46ad9?auto=format&fit=crop&q=80&w=800"
+                        src={api.resolveMediaUrl(aboutUs.mainImage)}
                         alt="Inside PC Paradise Store"
                     />
                 </div>

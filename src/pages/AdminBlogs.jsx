@@ -149,7 +149,7 @@ const AdminBlogs = () => {
                                 <label>Cover Image</label>
                                 <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                                     {formData.image && (
-                                        <img src={formData.image} alt="Cover Preview" style={{ width: '60px', height: '40px', objectFit: 'cover', borderRadius: '4px', border: '1px solid var(--surface-border)' }} />
+                                        <img src={api.resolveMediaUrl(formData.image)} alt="Cover Preview" style={{ width: '60px', height: '40px', objectFit: 'cover', borderRadius: '4px', border: '1px solid var(--surface-border)' }} />
                                     )}
                                     <input type="file" accept="image/*" className="admin-input" onChange={handleFileUpload} disabled={uploadingImage} />
                                 </div>

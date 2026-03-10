@@ -167,7 +167,7 @@ const AdminProducts = () => {
                 {filtered.map(p => (
                     <div key={p.id} className="product-admin-card glass-panel">
                         <img
-                            src={p.images?.[0] || 'https://placehold.co/80x60?text=No+Image'}
+                            src={api.resolveMediaUrl(p.images?.[0]) || 'https://placehold.co/80x60?text=No+Image'}
                             alt={p.title}
                             className="product-admin-thumb"
                         />
@@ -233,7 +233,7 @@ const AdminProducts = () => {
                                 {formData.images.map((img, i) => (
                                     <div key={i} className="image-row">
                                         <div className="image-preview-thumb">
-                                            {img ? <img src={img} alt="" onError={e => e.target.style.display = 'none'} /> : <span>No img</span>}
+                                            {img ? <img src={api.resolveMediaUrl(img)} alt="" onError={e => e.target.style.display = 'none'} /> : <span>No img</span>}
                                         </div>
                                         <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', gap: '4px' }}>
                                             <input

@@ -1,58 +1,68 @@
-# PC Paradise - Premium Tech Catalog
+# PC Paradise Secure Deployment
 
-A full-stack web application for a tech shop featuring a dynamic product catalog, administration panel, and bilingual support (EN/FR).
+This repository is prepared for a split public/admin deployment on Coolify.
 
-## 🚀 Getting Started
+## Local development
 
-### 1. Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
+Install dependencies:
 
-### 2. Installation
-Clone the repository and install dependencies:
 ```bash
-npm install
+npm ci
 ```
 
-### 3. Environment Setup
-Create a `.env` file in the root directory and a `.env` file in the `server/` directory based on the provided `.env.example` files.
+Run the frontend:
 
-#### Root `.env` (Frontend)
-```env
-VITE_API_URL=http://localhost:3002/api
-```
-
-#### `server/.env` (Backend)
-```env
-PORT=3002
-BASE_URL=http://localhost:3002
-ALLOWED_ORIGINS=http://localhost:5173
-```
-
-### 4. Running the Application
-
-#### Start Backend
-```bash
-npm run server
-```
-
-#### Start Frontend (Development)
 ```bash
 npm run dev
 ```
 
-## 🛠 Features
-- **Dynamic Catalog:** Browse products fetched from a JSON-based database.
-- **Admin Panel:** (/admin) Secure access to manage products, promotions, and site settings.
-- **Bilingual Interface:** Automatic browser language detection with manual toggle (EN/FR).
-- **Responsive Design:** Optimized for mobile and desktop viewing.
-- **WhatsApp Integration:** Direct order confirmation via WhatsApp.
+Run the public API server:
 
-## 📦 Tech Stack
-- **Frontend:** React, Vite, Lucide Icons, Axios, i18next.
-- **Backend:** Node.js, Express.js, Multer (file uploads).
-- **Database:** Local JSON files for lightweight, fast data management.
+```bash
+npm run server:website
+```
 
-## 🔒 Security Note
-- Default admin credentials: `admin` / `admin` (Change these in the Admin Settings).
-- The `auth.json` file and uploaded images are ignored by Git for security.
+Run the admin API server:
+
+```bash
+npm run server:admin
+```
+
+Development defaults:
+- website API: `http://localhost:3004`
+- admin API: `http://localhost:3104`
+- Vite frontend: `http://localhost:5173`
+
+The frontend automatically uses the website API on public routes and the admin API on `/admin` routes.
+
+## Production domains
+
+- public site: `pc.ibnbatoutaweb.com`
+- admin site: `admin.pc.ibnbatoutaweb.com`
+
+## Environment variables
+
+See [.env.example](.env.example).
+
+Key values for production:
+- `WEBSITE_PORT=3004`
+- `ADMIN_PORT=3104`
+- `PRODUCT_DOMAIN=pc.ibnbatoutaweb.com`
+- `ADMIN_DOMAIN=admin.pc.ibnbatoutaweb.com`
+- `ADMIN_USER=admin`
+- `ADMIN_PASS=<strong-password>`
+- `COOKIE_SECURE=true`
+- `DATA_DIR=/app/storage/data`
+- `UPLOADS_DIR=/app/storage/uploads`
+
+## Security model
+
+- public server exposes only read APIs
+- admin writes require server-side session auth
+- admin credentials are read only from environment variables
+- uploads require admin auth and are size/type limited
+
+## Deployment
+
+Use Coolify with `Docker Compose` and the repository root `docker-compose.yml`.
+Detailed deployment steps are in [DEPLOYMENT.md](DEPLOYMENT.md).

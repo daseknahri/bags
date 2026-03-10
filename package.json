@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "server": "node server/index.js",
+    "server:website": "node website-server.cjs",
+    "server:admin": "node admin-server.cjs",
     "build": "vite build",
+    "check": "node --check website-server.cjs && node --check admin-server.cjs && node --check server/site-store.cjs && node --check server/server-common.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

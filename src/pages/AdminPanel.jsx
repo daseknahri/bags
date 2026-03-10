@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import { LayoutDashboard, Package, Settings, FileText, LogOut, Tag } from 'lucide-react';
 import AdminProducts from './AdminProducts';
@@ -11,24 +11,75 @@ import './AdminProducts.css';
 
 const AdminPanel = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [authChecked, setAuthChecked] = useState(false);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [loginError, setLoginError] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
 
+    useEffect(() => {
+        let active = true;
+
+        const syncSession = async () => {
+            try {
+                const session = await api.getAdminSession();
+                if (!active) return;
+                setIsAuthenticated(Boolean(session?.authenticated));
+            } catch (_error) {
+                if (!active) return;
+                setIsAuthenticated(false);
+            } finally {
+                if (active) setAuthChecked(true);
+            }
+        };
+
+        const handleAuthRequired = () => {
+            setIsAuthenticated(false);
+            navigate('/admin');
+        };
+
+        window.addEventListener('pc-admin-auth-required', handleAuthRequired);
+        void syncSession();
+
+        return () => {
+            active = false;
+            window.removeEventListener('pc-admin-auth-required', handleAuthRequired);
+        };
+    }, [navigate]);
+
     const handleLogin = async (e) => {
         e.preventDefault();
         setLoginError('');
         try {
             const res = await api.login(username, password);
-            if (res.success) {
+            if (res.ok) {
                 setIsAuthenticated(true);
             }
         } catch (err) {
             setLoginError('Invalid username or password');
         }
     };
+
+    const handleLogout = async () => {
+        try {
+            await api.logout();
+        } catch (_error) {
+        }
+        setIsAuthenticated(false);
+        navigate('/admin');
+    };
+
+    if (!authChecked) {
+        return (
+            <div className="admin-login-wrapper">
+                <div className="glass-panel admin-login-card">
+                    <h2>Checking session...</h2>
+                    <p>Please wait while the admin session is verified.</p>
+                </div>
+            </div>
+        );
+    }
 
     if (!isAuthenticated) {
         return (
@@ -92,7 +143,7 @@ const AdminPanel = () => {
                 <div className="admin-sidebar-footer">
                     <button
                         className="admin-nav-item text-danger"
-                        onClick={() => { setIsAuthenticated(false); navigate('/'); }}
+                        onClick={handleLogout}
                         style={{ width: '100%', background: 'transparent', border: 'none', cursor: 'pointer', textAlign: 'left' }}
                     >
                         <LogOut size={20} />

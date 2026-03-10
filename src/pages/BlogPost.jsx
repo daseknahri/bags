@@ -21,7 +21,7 @@ const BlogPost = () => {
                 <title>{post.seoTitle || post.title}</title>
                 <meta name="description" content={post.seoDescription || post.excerpt} />
                 <meta property="og:title" content={post.seoTitle || post.title} />
-                <meta property="og:image" content={post.image} />
+                <meta property="og:image" content={api.resolveMediaUrl(post.image)} />
             </Helmet>
 
             <Link to="/blog" className="back-link">
@@ -39,7 +39,7 @@ const BlogPost = () => {
 
                 {post.image && (
                     <div className="post-main-image">
-                        <img src={post.image} alt={post.title} />
+                        <img src={api.resolveMediaUrl(post.image)} alt={post.title} />
                     </div>
                 )}
 
