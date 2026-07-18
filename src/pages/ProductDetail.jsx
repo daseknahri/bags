@@ -72,7 +72,7 @@ const ProductDetail = () => {
     return (
         <div className="product-detail-page container animate-fade-in">
             <Helmet>
-                <title>{product.title} | PuaFeli</title>
+                <title>{product.title} | Kago Bags</title>
                 <meta name="description" content={product.description?.substring(0, 160)} />
                 <meta property="og:title" content={product.title} />
                 <meta property="og:image" content={api.resolveMediaUrl(mainImage)} />

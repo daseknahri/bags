@@ -10,7 +10,7 @@ const EMPTY_FORM = {
     description: '',
     promotion: false,
     images: [''],
-    specs: [{ key: 'Brand', value: 'PuaFeli' }, { key: 'Category', value: 'Tote Bags' }, { key: 'Material', value: '' }],
+    specs: [{ key: 'Brand', value: 'Kago Bags' }, { key: 'Category', value: 'Tote Bags' }, { key: 'Material', value: '' }],
 };
 
 // Helper: convert specs array [{key,value}] <-> object {Brand:'HP'}
@@ -89,7 +89,7 @@ const AdminProducts = () => {
             await api.updateProduct(editingId, payload);
             showToast('Product updated successfully!');
         } else {
-            await api.createProduct({ ...payload, id: 'pf-' + Date.now() });
+            await api.createProduct({ ...payload, id: 'kg-' + Date.now() });
             showToast('Product created successfully!');
         }
         handleCloseModal();
@@ -213,7 +213,7 @@ const AdminProducts = () => {
                                 <h3 className="form-section-title">Basic Details</h3>
                                 <div className="form-group">
                                     <label>Product Title *</label>
-                                    <input required className="admin-input" type="text" placeholder="e.g. PuaFeli Canvas Tote"
+                                    <input required className="admin-input" type="text" placeholder="e.g. Kago Canvas Tote"
                                         value={formData.title} onChange={e => setFormData({ ...formData, title: e.target.value })} />
                                 </div>
                                 <div className="form-group">

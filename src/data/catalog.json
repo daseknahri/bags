@@ -1,8 +1,8 @@
 [
   {
-    "id": "pf-canvas-tote-set",
+    "id": "kg-canvas-tote-set",
     "url": "#",
-    "title": "PuaFeli Canvas Tote & Accessories Set",
+    "title": "Kago Canvas Tote & Accessories Set",
     "description": "A refined everyday tote in textured cream canvas, paired with a matching wallet and detachable strap for workdays, errands, and weekend plans.",
     "price": "890.00 DHs",
     "images": [
@@ -10,7 +10,7 @@
     ],
     "specs": {
       "Category": "Tote Bags",
-      "Brand": "PuaFeli",
+      "Brand": "Kago Bags",
       "Material": "Textured canvas with vegan leather trim",
       "Color": "Cream",
       "Hardware": "Champagne gold",
@@ -22,9 +22,9 @@
     "discountPrice": "790.00 DHs"
   },
   {
-    "id": "pf-noir-crossbody",
+    "id": "kg-noir-crossbody",
     "url": "#",
-    "title": "PuaFeli Noir Crossbody",
+    "title": "Kago Noir Crossbody",
     "description": "A compact black crossbody with a structured silhouette, adjustable strap, and polished clasp for hands-free daily styling.",
     "price": "620.00 DHs",
     "images": [
@@ -32,7 +32,7 @@
     ],
     "specs": {
       "Category": "Crossbody Bags",
-      "Brand": "PuaFeli",
+      "Brand": "Kago Bags",
       "Material": "Pebbled vegan leather",
       "Color": "Black",
       "Hardware": "Gold",
@@ -42,9 +42,9 @@
     }
   },
   {
-    "id": "pf-cognac-backpack",
+    "id": "kg-cognac-backpack",
     "url": "#",
-    "title": "PuaFeli Cognac City Backpack",
+    "title": "Kago Cognac City Backpack",
     "description": "A slim leather backpack with a tablet-friendly interior, top handle, and secure zipper pockets for polished commuting.",
     "price": "980.00 DHs",
     "images": [
@@ -52,7 +52,7 @@
     ],
     "specs": {
       "Category": "Backpacks",
-      "Brand": "PuaFeli",
+      "Brand": "Kago Bags",
       "Material": "Pebbled vegan leather",
       "Color": "Cognac",
       "Hardware": "Brushed gold",
@@ -62,9 +62,9 @@
     }
   },
   {
-    "id": "pf-raffia-summer-tote",
+    "id": "kg-raffia-summer-tote",
     "url": "#",
-    "title": "PuaFeli Raffia Summer Tote",
+    "title": "Kago Raffia Summer Tote",
     "description": "A breezy woven tote with tan handles and a drawstring pouch, made for beach days, market mornings, and travel styling.",
     "price": "740.00 DHs",
     "images": [
@@ -72,7 +72,7 @@
     ],
     "specs": {
       "Category": "Tote Bags",
-      "Brand": "PuaFeli",
+      "Brand": "Kago Bags",
       "Material": "Natural raffia with vegan leather handles",
       "Color": "Natural",
       "Hardware": "Gold tone",
@@ -84,9 +84,9 @@
     "discountPrice": "650.00 DHs"
   },
   {
-    "id": "pf-champagne-clutch",
+    "id": "kg-champagne-clutch",
     "url": "#",
-    "title": "PuaFeli Champagne Evening Clutch",
+    "title": "Kago Champagne Evening Clutch",
     "description": "A satin-finish mini clutch with a detachable chain strap and polished frame, sized for phone, cards, keys, and lipstick.",
     "price": "560.00 DHs",
     "images": [
@@ -94,7 +94,7 @@
     ],
     "specs": {
       "Category": "Clutches",
-      "Brand": "PuaFeli",
+      "Brand": "Kago Bags",
       "Material": "Satin vegan leather",
       "Color": "Champagne",
       "Hardware": "Polished gold",
@@ -106,9 +106,9 @@
     "discountPrice": "490.00 DHs"
   },
   {
-    "id": "pf-strap-kit",
+    "id": "kg-strap-kit",
     "url": "#",
-    "title": "PuaFeli Adjustable Strap Kit",
+    "title": "Kago Adjustable Strap Kit",
     "description": "A cream replacement strap with gold clips for refreshing your tote, crossbody, or travel bag.",
     "price": "180.00 DHs",
     "images": [
@@ -116,7 +116,7 @@
     ],
     "specs": {
       "Category": "Accessories",
-      "Brand": "PuaFeli",
+      "Brand": "Kago Bags",
       "Material": "Vegan leather",
       "Color": "Cream",
       "Hardware": "Gold clips",

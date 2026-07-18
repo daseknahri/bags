@@ -25,13 +25,13 @@ const cartReducer = (state, action) => {
 
 export const CartProvider = ({ children }) => {
     const [cart, dispatch] = useReducer(cartReducer, [], () => {
-        try { return JSON.parse(localStorage.getItem('puafeli_cart')) || []; }
+        try { return JSON.parse(localStorage.getItem('kago_cart')) || []; }
         catch { return []; }
     });
 
     // Persist to localStorage on every change
     useEffect(() => {
-        localStorage.setItem('puafeli_cart', JSON.stringify(cart));
+        localStorage.setItem('kago_cart', JSON.stringify(cart));
     }, [cart]);
 
     const addItem = (product) => {

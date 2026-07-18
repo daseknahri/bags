@@ -1,4 +1,4 @@
-# PuaFeli Bags Store
+# Kago Bags Store
 
 Client-ready React ecommerce storefront for a premium bag shop, with public catalog, product detail pages, WhatsApp ordering, promotions, journal posts, location page, and a protected admin panel for content updates.
 

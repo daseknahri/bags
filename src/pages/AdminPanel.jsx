@@ -39,12 +39,12 @@ const AdminPanel = () => {
             navigate('/admin');
         };
 
-        window.addEventListener('puafeli-admin-auth-required', handleAuthRequired);
+        window.addEventListener('kago-admin-auth-required', handleAuthRequired);
         void syncSession();
 
         return () => {
             active = false;
-            window.removeEventListener('puafeli-admin-auth-required', handleAuthRequired);
+            window.removeEventListener('kago-admin-auth-required', handleAuthRequired);
         };
     }, [navigate]);
 
@@ -151,7 +151,7 @@ const AdminPanel = () => {
 
             <main className="admin-main">
                 <Routes>
-                    <Route path="/" element={<div className="admin-welcome"><h2>Welcome to PuaFeli Admin</h2><p>Select a category from the sidebar to start managing your products, offers, journal, and settings.</p></div>} />
+                    <Route path="/" element={<div className="admin-welcome"><h2>Welcome to Kago Bags Admin</h2><p>Select a category from the sidebar to start managing your products, offers, journal, and settings.</p></div>} />
                     <Route path="/products" element={<AdminProducts />} />
                     <Route path="/promotions" element={<AdminPromotions />} />
                     <Route path="/blogs" element={<AdminBlogs />} />

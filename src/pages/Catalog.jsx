@@ -67,12 +67,12 @@ const Catalog = () => {
     return (
         <div className="catalog-page container animate-fade-in">
             <Helmet>
-                <title>Shop Bags | PuaFeli</title>
-                <meta name="description" content="Browse PuaFeli totes, crossbody bags, backpacks, clutches, and accessories." />
+                <title>Shop Bags | Kago Bags</title>
+                <meta name="description" content="Browse Kago Bags totes, crossbody bags, backpacks, clutches, and accessories." />
             </Helmet>
 
             <div className="catalog-header">
-                <p className="catalog-kicker">PuaFeli collection</p>
+                <p className="catalog-kicker">Kago Bags collection</p>
                 <h1>{t('catalog.fullCatalog')}</h1>
                 <p>{t('catalog.explore')}</p>
             </div>

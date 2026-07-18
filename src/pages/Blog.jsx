@@ -7,7 +7,7 @@ import './Blog.css';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
-    const [seo, setSeo] = useState({ defaultTitle: 'PuaFeli Bags', defaultDescription: 'Bag styling notes and buying guides.' });
+    const [seo, setSeo] = useState({ defaultTitle: 'Kago Bags', defaultDescription: 'Bag styling notes and buying guides.' });
 
     useEffect(() => {
         const fetchData = async () => {
@@ -28,11 +28,11 @@ const Blog = () => {
         <div className="blog-page container animate-fade-in">
             <Helmet>
                 <title>{`Journal | ${seo.defaultTitle}`}</title>
-                <meta name="description" content="PuaFeli styling notes, bag care tips, and buying guides." />
+                <meta name="description" content="Kago Bags styling notes, bag care tips, and buying guides." />
             </Helmet>
 
             <div className="blog-header">
-                <h1>PuaFeli <span className="accent">Journal</span></h1>
+                <h1>Kago Bags <span className="accent">Journal</span></h1>
                 <p>Styling notes, care tips, and practical guides for choosing your next bag.</p>
             </div>
 

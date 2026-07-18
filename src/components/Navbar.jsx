@@ -35,9 +35,9 @@ const Navbar = () => {
         <>
             <nav className="navbar">
                 <div className="navbar-container container">
-                    <Link to="/" className="navbar-logo" aria-label="PuaFeli home">
-                        <span className="logo-mark">PF</span>
-                        <span className="logo-text">PuaFeli</span>
+                    <Link to="/" className="navbar-logo" aria-label="Kago Bags home">
+                        <img className="logo-image" src="/assets/brand/kago-logo.png" alt="" />
+                        <span className="logo-text">Kago Bags</span>
                     </Link>
 
                     <div className="navbar-menu">

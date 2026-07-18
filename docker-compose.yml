@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: website-production
-    image: puafeli-website:latest
+    image: kago-website:latest
     restart: unless-stopped
     command: node website-server.cjs
     environment:
@@ -30,7 +30,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: admin-production
-    image: puafeli-admin:latest
+    image: kago-admin:latest
     restart: unless-stopped
     command: node admin-server.cjs
     environment:

@@ -19,7 +19,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
 
     const buildWhatsAppMessage = () => {
         if (cart.length === 0) return '';
-        let message = '*New PuaFeli order request*\n\n';
+        let message = '*New Kago Bags order request*\n\n';
         cart.forEach((item, index) => {
             message += `*${index + 1}. ${item.title}*\n`;
             message += `Qty: ${item.qty} | Price: ${item.price}\n\n`;
@@ -48,7 +48,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                     <div className="cart-empty">
                         <ShoppingBag size={56} className="empty-icon" />
                         <h3>{t('cart.empty')}</h3>
-                        <p>Save your favorite PuaFeli pieces here before sending the order.</p>
+                        <p>Save your favorite Kago Bags pieces here before sending the order.</p>
                         <Link to="/catalog" className="btn-primary" onClick={onClose}>
                             {t('cart.browse')}
                         </Link>

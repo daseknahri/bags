@@ -19,7 +19,7 @@ const resources = {
                 cart: "Cart"
             },
             hero: {
-                welcome: "PuaFeli",
+                welcome: "Kago Bags",
                 subtitle: "Premium bags for workdays, weekends, and evening plans. Curated in Morocco with fast WhatsApp ordering.",
                 shopNow: "Shop Bags",
                 viewPromos: "View Offers"
@@ -63,7 +63,7 @@ const resources = {
                 specialOffers: "Limited Offers",
                 exclusive: "Client-ready",
                 deals: "Bag Deals",
-                desc: "Seasonal prices on selected PuaFeli pieces while stock lasts.",
+                desc: "Seasonal prices on selected Kago Bags pieces while stock lasts.",
                 saleBadge: "Offer",
                 empty: "No active offers right now.",
                 emptyDesc: "Check back soon for new edits."
@@ -86,7 +86,7 @@ const resources = {
                 cart: "Panier"
             },
             hero: {
-                welcome: "PuaFeli",
+                welcome: "Kago Bags",
                 subtitle: "Sacs premium pour le travail, le weekend et les soirees. Selection au Maroc avec commande rapide sur WhatsApp.",
                 shopNow: "Voir les sacs",
                 viewPromos: "Voir les offres"
@@ -129,8 +129,8 @@ const resources = {
             promo: {
                 specialOffers: "Offres limitees",
                 exclusive: "Offres",
-                deals: "PuaFeli",
-                desc: "Prix de saison sur une selection de sacs PuaFeli, selon stock disponible.",
+                deals: "Kago Bags",
+                desc: "Prix de saison sur une selection de sacs Kago Bags, selon stock disponible.",
                 saleBadge: "Offre",
                 empty: "Aucune offre active pour le moment.",
                 emptyDesc: "Revenez bientot pour une nouvelle selection."

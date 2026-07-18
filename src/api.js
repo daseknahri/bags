@@ -45,7 +45,7 @@ adminClient.interceptors.response.use(
             !url.includes('/admin/session') &&
             typeof window !== 'undefined'
         ) {
-            window.dispatchEvent(new CustomEvent('puafeli-admin-auth-required'));
+            window.dispatchEvent(new CustomEvent('kago-admin-auth-required'));
         }
         return Promise.reject(error);
     }

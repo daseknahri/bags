@@ -5,7 +5,7 @@ import './About.css';
 const About = () => {
     const [aboutUs, setAboutUs] = useState({
         mainImage: '/assets/bags/canvas-tote-set.png',
-        description: 'PuaFeli curates polished bags for daily movement: structured totes, compact crossbodies, refined clutches, and travel-ready accessories selected for texture, function, and quiet elegance.'
+        description: 'Kago Bags curates polished bags for daily movement: structured totes, compact crossbodies, refined clutches, and travel-ready accessories selected for texture, function, and quiet elegance.'
     });
 
     useEffect(() => {
@@ -22,7 +22,7 @@ const About = () => {
     return (
         <div className="about-page container animate-fade-in">
             <div className="about-hero">
-                <p className="about-kicker">PuaFeli studio</p>
+                <p className="about-kicker">Kago Bags studio</p>
                 <h1>Designed around the way you move.</h1>
                 <p>Calm silhouettes, useful capacity, and finishes that make daily outfits feel complete.</p>
             </div>
@@ -40,7 +40,7 @@ const About = () => {
                 <div className="about-image">
                     <img
                         src={api.resolveMediaUrl(aboutUs.mainImage)}
-                        alt="PuaFeli canvas tote and accessories"
+                        alt="Kago canvas tote and accessories"
                     />
                 </div>
             </div>

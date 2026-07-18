@@ -12,7 +12,7 @@ const Home = () => {
     const [products, setProducts] = useState([]);
     const [activeCategory, setActiveCategory] = useState('All');
     const [seo, setSeo] = useState({
-        defaultTitle: 'PuaFeli Bags | Premium Handbags in Morocco',
+        defaultTitle: 'Kago Bags | Premium Handbags in Morocco',
         defaultDescription: 'Shop elegant bags and accessories in Morocco.'
     });
 
@@ -112,7 +112,7 @@ const Home = () => {
                         <h2>Quiet pieces that carry the whole day.</h2>
                     </div>
                     <p>
-                        PuaFeli focuses on shape, texture, and practical details: easy closures, polished hardware,
+                        Kago Bags focuses on shape, texture, and practical details: easy closures, polished hardware,
                         comfortable straps, and colors that move cleanly between work, travel, and evening plans.
                     </p>
                 </div>
