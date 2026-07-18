@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { api } from '../api';
@@ -7,7 +7,7 @@ import './Blog.css';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
-    const [seo, setSeo] = useState({ title: 'Tech Blog | PC Paradise', description: 'Read the latest tech news and reviews.' });
+    const [seo, setSeo] = useState({ defaultTitle: 'PuaFeli Bags', defaultDescription: 'Bag styling notes and buying guides.' });
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,7 +18,7 @@ const Blog = () => {
                 const settings = await api.getSettings();
                 if (settings?.seo) setSeo(settings.seo);
             } catch (err) {
-                console.error("Error fetching blogs:", err);
+                console.error('Error fetching blogs:', err);
             }
         };
         fetchData();
@@ -27,17 +27,17 @@ const Blog = () => {
     return (
         <div className="blog-page container animate-fade-in">
             <Helmet>
-                <title>{`Blog | ${seo.defaultTitle || seo.title}`}</title>
-                <meta name="description" content="Latest technology news, laptop reviews, and PC tips from PC Paradise Morocco." />
+                <title>{`Journal | ${seo.defaultTitle}`}</title>
+                <meta name="description" content="PuaFeli styling notes, bag care tips, and buying guides." />
             </Helmet>
 
             <div className="blog-header">
-                <h1>Tech <span className="accent">Insights</span></h1>
-                <p>Expert reviews, tech news, and buying guides.</p>
+                <h1>PuaFeli <span className="accent">Journal</span></h1>
+                <p>Styling notes, care tips, and practical guides for choosing your next bag.</p>
             </div>
 
             <div className="blog-grid">
-                {blogs.map(post => (
+                {blogs.map((post) => (
                     <Link to={`/blog/${post.slug}`} key={post.id} className="blog-card glass-panel">
                         <div className="blog-image">
                             <img src={api.resolveMediaUrl(post.image) || '/placeholder.png'} alt={post.title} />
@@ -49,13 +49,13 @@ const Blog = () => {
                                 <span className="meta-item"><User size={14} /> {post.author}</span>
                             </div>
                             <p>{post.excerpt}</p>
-                            <span className="read-more">Read Full Article →</span>
+                            <span className="read-more">Read article</span>
                         </div>
                     </Link>
                 ))}
                 {blogs.length === 0 && (
                     <div className="no-blogs">
-                        <h3>No posts yet. Check back soon!</h3>
+                        <h3>No posts yet. Check back soon.</h3>
                     </div>
                 )}
             </div>

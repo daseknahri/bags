@@ -12,10 +12,10 @@ const LocationPage = () => {
         }).catch(() => { });
     }, []);
 
-    const address = contact?.address || '123 Tech Avenue, Silicon District, Casablanca, Morocco';
+    const address = contact?.address || 'Casablanca, Morocco';
     const phone1 = contact?.phone1 || '+212 600 123 456';
     const phone2 = contact?.phone2;
-    const email1 = contact?.email1 || 'hello@pcparadise.ma';
+    const email1 = contact?.email1 || 'hello@puafeli.ma';
     const email2 = contact?.email2;
     const hours = contact?.hours || 'Mon - Sat: 9:00 AM - 8:00 PM';
     const mapUrl = contact?.mapUrl || 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.5600072049!2d-7.669394541796874!3d33.58988620000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1709848512345!5m2!1sen!2sus';
@@ -24,7 +24,7 @@ const LocationPage = () => {
         <div className="location-page container animate-fade-in">
             <div className="location-hero">
                 <h1>Visit <span className="accent">Our Store</span></h1>
-                <p>Come experience our premium technology firsthand.</p>
+                <p>Book a bag viewing, confirm availability, or arrange delivery across Morocco.</p>
             </div>
 
             <div className="location-content">
@@ -73,7 +73,6 @@ const LocationPage = () => {
                 </div>
 
                 <div className="map-container glass-panel">
-                    {/* Using a generic Google maps embed iframe for visual representation */}
                     <iframe
                         src={mapUrl}
                         width="100%"

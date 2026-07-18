@@ -12,7 +12,7 @@ const FloatingWhatsApp = () => {
         }).catch(() => { });
     }, []);
 
-    const message = encodeURIComponent("Hello! I need some help with your products.");
+    const message = encodeURIComponent('Hello PuaFeli, I need help choosing a bag.');
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
     return (

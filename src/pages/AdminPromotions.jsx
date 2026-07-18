@@ -7,7 +7,7 @@ const AdminPromotions = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
-    const [promoPrice, setPromoPrice] = useState('');
+    const [promoDrafts, setPromoDrafts] = useState({});
     const [toastMessage, setToastMessage] = useState('');
 
     const showToast = (msg) => {
@@ -69,7 +69,7 @@ const AdminPromotions = () => {
             p.specs?.Category?.toLowerCase().includes(searchTerm.toLowerCase()))
     );
 
-    if (loading) return <div className="admin-loading"><Loader2 className="animate-spin" /> Loading promotions…</div>;
+    if (loading) return <div className="admin-loading"><Loader2 className="animate-spin" /> Loading promotions...</div>;
 
     return (
         <div className="admin-promotions animate-fade-in" style={{ padding: '20px' }}>
@@ -137,21 +137,17 @@ const AdminPromotions = () => {
                                             className="admin-input"
                                             placeholder="Promo price (e.g. 5,000 DHs)"
                                             style={{ fontSize: '0.8rem', padding: '6px 12px' }}
+                                            value={promoDrafts[p.id] || ''}
+                                            onChange={(e) => setPromoDrafts(prev => ({ ...prev, [p.id]: e.target.value }))}
                                             onKeyDown={(e) => {
                                                 if (e.key === 'Enter') handleApplyPromo(p, e.target.value);
-                                            }}
-                                            onBlur={(e) => {
-                                                if (e.target.value) p._tempPrice = e.target.value;
                                             }}
                                         />
                                     </div>
                                     <button
                                         className="btn-primary"
                                         style={{ padding: '6px 10px' }}
-                                        onClick={(e) => {
-                                            const input = e.currentTarget.previousSibling.firstChild;
-                                            handleApplyPromo(p, p._tempPrice || '');
-                                        }}
+                                        onClick={() => handleApplyPromo(p, promoDrafts[p.id] || '')}
                                     >
                                         <Check size={16} />
                                     </button>

@@ -59,5 +59,5 @@ app.use((_req, res) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`PC website server running on 0.0.0.0:${port}`);
+  console.log(`PuaFeli website server running on 0.0.0.0:${port}`);
 });

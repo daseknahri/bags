@@ -2,7 +2,6 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-// Translation resources
 const resources = {
     en: {
         translation: {
@@ -12,68 +11,62 @@ const resources = {
             },
             nav: {
                 home: "Home",
-                catalog: "Catalog",
-                promotion: "Promotion",
-                blog: "Blog",
+                catalog: "Shop",
+                promotion: "Offers",
+                blog: "Journal",
                 about: "About",
-                location: "Location",
+                location: "Visit",
                 cart: "Cart"
             },
             hero: {
-                welcome: "Welcome to",
-                subtitle: "Laptop Catalogue – Clear, Simple & Always Updated. Discover premium technology designed for your lifestyle.",
-                shopNow: "Shop Now",
-                viewPromos: "View Promotions"
+                welcome: "PuaFeli",
+                subtitle: "Premium bags for workdays, weekends, and evening plans. Curated in Morocco with fast WhatsApp ordering.",
+                shopNow: "Shop Bags",
+                viewPromos: "View Offers"
             },
             catalog: {
-                featured: "Featured Products",
-                fullCatalog: "Full Catalog",
-                explore: "Explore our complete range of premium technology.",
+                featured: "Featured Bags",
+                fullCatalog: "Shop The Collection",
+                explore: "Filter by silhouette, material, and price to find the bag that fits your day.",
                 filters: "Filters",
-                category: "Category",
+                category: "Style",
                 brand: "Brand",
                 sortPrice: "Sort Price",
-                sortDefault: "Default",
+                sortDefault: "Featured",
                 sortLowHigh: "Low to High",
                 sortHighLow: "High to Low",
-                showing: "Showing {{count}} products",
-                noProducts: "No products found",
-                adjustFilters: "Try adjusting your filters.",
+                showing: "{{count}} products",
+                noProducts: "No bags found",
+                adjustFilters: "Try a different style or reset the filters.",
                 resetFilters: "Reset Filters",
                 search: "Search products...",
                 all: "All"
             },
             product: {
                 addToCart: "Add to Cart",
-                added: "Added!",
-                sale: "Sale",
+                added: "Added",
+                sale: "Offer",
                 description: "Description",
-                backToCatalog: "Back to Catalog",
-                clickToZoom: "Click to zoom",
-                promo: "PROMO"
+                backToCatalog: "Back to Shop",
+                clickToZoom: "Zoom",
+                promo: "Offer"
             },
             cart: {
-                title: "My Cart",
-                empty: "Your cart is empty",
-                browse: "Browse Catalog",
+                title: "Shopping Bag",
+                empty: "Your bag is empty",
+                browse: "Shop Collection",
                 total: "Total",
-                confirmOrder: "Confirm Order on WhatsApp",
+                confirmOrder: "Order on WhatsApp",
                 clear: "Clear Cart"
             },
             promo: {
-                specialOffers: "Special Offers",
-                exclusive: "Exclusive",
-                deals: "Deals",
-                desc: "Discover limited-time discounts on premium electronics. Upgrade your tech for less.",
-                saleBadge: "Sale",
-                empty: "No active promotions right now.",
-                emptyDesc: "Check back later for new exclusive deals!"
-            },
-            footer: {
-                quickLinks: "Quick Links",
-                contact: "Contact Us",
-                followUs: "Follow Us",
-                rights: "All rights reserved."
+                specialOffers: "Limited Offers",
+                exclusive: "Client-ready",
+                deals: "Bag Deals",
+                desc: "Seasonal prices on selected PuaFeli pieces while stock lasts.",
+                saleBadge: "Offer",
+                empty: "No active offers right now.",
+                emptyDesc: "Check back soon for new edits."
             }
         }
     },
@@ -81,72 +74,66 @@ const resources = {
         translation: {
             common: {
                 loading: "Chargement",
-                error: "Erreur",
+                error: "Erreur"
             },
             nav: {
                 home: "Accueil",
-                catalog: "Catalogue",
-                promotion: "Promotions",
-                blog: "Blog",
-                about: "À Propos",
-                location: "Localisation",
+                catalog: "Boutique",
+                promotion: "Offres",
+                blog: "Journal",
+                about: "A propos",
+                location: "Visiter",
                 cart: "Panier"
             },
             hero: {
-                welcome: "Bienvenue chez",
-                subtitle: "Catalogue PC – Clair, Simple & Toujours à Jour. Découvrez la technologie premium conçue pour vous.",
-                shopNow: "Acheter Maintenant",
-                viewPromos: "Voir les Promotions"
+                welcome: "PuaFeli",
+                subtitle: "Sacs premium pour le travail, le weekend et les soirees. Selection au Maroc avec commande rapide sur WhatsApp.",
+                shopNow: "Voir les sacs",
+                viewPromos: "Voir les offres"
             },
             catalog: {
-                featured: "Produits Vedettes",
-                fullCatalog: "Catalogue Complet",
-                explore: "Explorez notre gamme complète de technologies haut de gamme.",
+                featured: "Sacs en vedette",
+                fullCatalog: "Boutique",
+                explore: "Filtrez par style, matiere et prix pour trouver le sac adapte a votre journee.",
                 filters: "Filtres",
-                category: "Catégorie",
+                category: "Style",
                 brand: "Marque",
-                sortPrice: "Trier par Prix",
-                sortDefault: "Par Défaut",
+                sortPrice: "Trier par prix",
+                sortDefault: "Selection",
                 sortLowHigh: "Prix croissant",
-                sortHighLow: "Prix décroissant",
-                showing: "{{count}} produits affichés",
-                noProducts: "Aucun produit trouvé",
-                adjustFilters: "Essayez d'ajuster vos filtres.",
-                resetFilters: "Réinitialiser les filtres",
-                search: "Rechercher des produits...",
+                sortHighLow: "Prix decroissant",
+                showing: "{{count}} produits",
+                noProducts: "Aucun sac trouve",
+                adjustFilters: "Essayez un autre style ou reinitialisez les filtres.",
+                resetFilters: "Reinitialiser",
+                search: "Rechercher...",
                 all: "Tout"
             },
             product: {
                 addToCart: "Ajouter au panier",
-                added: "Ajouté !",
-                sale: "Promo",
+                added: "Ajoute",
+                sale: "Offre",
                 description: "Description",
-                backToCatalog: "Retour au catalogue",
-                clickToZoom: "Cliquez pour zoomer",
-                promo: "PROMO"
+                backToCatalog: "Retour boutique",
+                clickToZoom: "Zoom",
+                promo: "Offre"
             },
             cart: {
-                title: "Mon Panier",
+                title: "Panier",
                 empty: "Votre panier est vide",
-                browse: "Voir le Catalogue",
+                browse: "Voir la collection",
                 total: "Total",
-                confirmOrder: "Confirmer la commande sur WhatsApp",
+                confirmOrder: "Commander sur WhatsApp",
                 clear: "Vider le panier"
             },
             promo: {
-                specialOffers: "Offres Spéciales",
+                specialOffers: "Offres limitees",
                 exclusive: "Offres",
-                deals: "Exclusives",
-                desc: "Découvrez des réductions à durée limitée sur l'électronique haut de gamme. Améliorez votre technologie pour moins cher.",
-                saleBadge: "Promo",
-                empty: "Aucune promotion active pour l'instant.",
-                emptyDesc: "Revenez plus tard pour de nouvelles offres exclusives !"
-            },
-            footer: {
-                quickLinks: "Liens Rapides",
-                contact: "Contactez-nous",
-                followUs: "Suivez-nous",
-                rights: "Tous droits réservés."
+                deals: "PuaFeli",
+                desc: "Prix de saison sur une selection de sacs PuaFeli, selon stock disponible.",
+                saleBadge: "Offre",
+                empty: "Aucune offre active pour le moment.",
+                emptyDesc: "Revenez bientot pour une nouvelle selection."
             }
         }
     }
@@ -157,10 +144,10 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
-        fallbackLng: 'fr', // Fallback to French if language not recognized
+        fallbackLng: 'fr',
         detection: {
             order: ['navigator', 'htmlTag', 'localStorage'],
-            caches: ['localStorage'],
+            caches: ['localStorage']
         },
         interpolation: {
             escapeValue: false

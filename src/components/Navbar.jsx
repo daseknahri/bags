@@ -7,6 +7,15 @@ import CartDrawer from './CartDrawer';
 import './Navbar.css';
 import './CartDrawer.css';
 
+const navItems = [
+    ['/', 'nav.home'],
+    ['/catalog', 'nav.catalog'],
+    ['/promotions', 'nav.promotion'],
+    ['/blog', 'nav.blog'],
+    ['/about', 'nav.about'],
+    ['/location', 'nav.location']
+];
+
 const Navbar = () => {
     const { t, i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
@@ -14,46 +23,46 @@ const Navbar = () => {
     const { totalItems } = useCart();
     const location = useLocation();
 
-    const isAdmin = location.pathname.startsWith('/admin');
-    if (isAdmin) return null; // Don't show navbar on admin panel
+    if (location.pathname.startsWith('/admin')) return null;
+
+    const toggleLanguage = () => {
+        const newLang = i18n.language.startsWith('fr') ? 'en' : 'fr';
+        i18n.changeLanguage(newLang);
+        document.documentElement.lang = newLang;
+    };
 
     return (
         <>
-            <nav className="navbar glass-panel">
+            <nav className="navbar">
                 <div className="navbar-container container">
-                    <Link to="/" className="navbar-logo">
-                        <span className="logo-text">PC<span className="accent">Paradise</span></span>
+                    <Link to="/" className="navbar-logo" aria-label="PuaFeli home">
+                        <span className="logo-mark">PF</span>
+                        <span className="logo-text">PuaFeli</span>
                     </Link>
 
                     <div className="navbar-menu">
-                        <Link to="/" className="nav-link">{t('nav.home')}</Link>
-                        <Link to="/catalog" className="nav-link">{t('nav.catalog')}</Link>
-                        <Link to="/promotions" className="nav-link">{t('nav.promotion')}</Link>
-                        <Link to="/blog" className="nav-link">{t('nav.blog')}</Link>
-                        <Link to="/about" className="nav-link">{t('nav.about')}</Link>
-                        <Link to="/location" className="nav-link">{t('nav.location')}</Link>
+                        {navItems.map(([href, label]) => (
+                            <Link
+                                key={href}
+                                to={href}
+                                className={`nav-link ${location.pathname === href ? 'active' : ''}`}
+                            >
+                                {t(label)}
+                            </Link>
+                        ))}
                     </div>
 
                     <div className="navbar-actions">
-                        <button className="icon-btn" aria-label="Search">
-                            <Search size={20} />
-                        </button>
-                        <button
-                            className="icon-btn tag-lang-switch"
-                            aria-label="Change Language"
-                            onClick={() => {
-                                const newLang = i18n.language.startsWith('fr') ? 'en' : 'fr';
-                                i18n.changeLanguage(newLang);
-                                document.documentElement.lang = newLang; // update html tag
-                            }}
-                        >
-                            <span style={{ fontSize: '0.85rem', fontWeight: 'bold', border: '1px solid var(--accent)', padding: '2px 6px', borderRadius: '4px' }}>
-                                {i18n.language.startsWith('fr') ? 'EN' : 'FR'}
-                            </span>
+                        <Link className="icon-btn" aria-label="Search collection" title="Search collection" to="/catalog">
+                            <Search size={19} />
+                        </Link>
+                        <button className="lang-switch" aria-label="Change language" onClick={toggleLanguage}>
+                            {i18n.language.startsWith('fr') ? 'EN' : 'FR'}
                         </button>
                         <button
                             className="icon-btn cart-btn"
-                            aria-label="Cart"
+                            aria-label="Open cart"
+                            title="Open cart"
                             onClick={() => setCartOpen(true)}
                         >
                             <ShoppingCart size={20} />
@@ -62,6 +71,7 @@ const Navbar = () => {
 
                         <button
                             className="icon-btn mobile-menu-btn"
+                            aria-label="Open menu"
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -70,17 +80,18 @@ const Navbar = () => {
                 </div>
 
                 {isOpen && (
-                    <div className="mobile-menu glass-panel animate-fade-in">
-                        <Link to="/" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.home')}</Link>
-                        <Link to="/catalog" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.catalog')}</Link>
-                        <Link to="/promotions" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.promotion')}</Link>
-                        <Link to="/blog" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.blog')}</Link>
-                        <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.about')}</Link>
-                        <Link to="/location" className="nav-link" onClick={() => setIsOpen(false)}>{t('nav.location')}</Link>
+                    <div className="mobile-menu animate-fade-in">
+                        {navItems.map(([href, label]) => (
+                            <Link key={href} to={href} className="nav-link" onClick={() => setIsOpen(false)}>
+                                {t(label)}
+                            </Link>
+                        ))}
                         <button
-                            className="nav-link"
-                            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--accent)', display: 'flex', alignItems: 'center', gap: '8px' }}
-                            onClick={() => { setIsOpen(false); setCartOpen(true); }}
+                            className="mobile-cart-link"
+                            onClick={() => {
+                                setIsOpen(false);
+                                setCartOpen(true);
+                            }}
                         >
                             <ShoppingCart size={18} /> {t('nav.cart')} {totalItems > 0 && `(${totalItems})`}
                         </button>

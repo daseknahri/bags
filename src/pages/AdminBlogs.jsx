@@ -141,7 +141,7 @@ const AdminBlogs = () => {
                             </div>
 
                             <div className="form-group">
-                                <label>URL Slug (e.g., best-laptops-2026)</label>
+                                <label>URL Slug (e.g., choose-everyday-bag)</label>
                                 <input required type="text" className="admin-input" value={formData.slug} onChange={e => setFormData({ ...formData, slug: e.target.value })} />
                             </div>
 

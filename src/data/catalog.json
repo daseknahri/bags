@@ -45,7 +45,7 @@
     "id": "pf-cognac-backpack",
     "url": "#",
     "title": "PuaFeli Cognac City Backpack",
-    "description": "A slim leather backpack with a laptop-friendly interior, top handle, and secure zipper pockets for polished commuting.",
+    "description": "A slim leather backpack with a tablet-friendly interior, top handle, and secure zipper pockets for polished commuting.",
     "price": "980.00 DHs",
     "images": [
       "/assets/bags/cognac-backpack.png"
@@ -57,7 +57,7 @@
       "Color": "Cognac",
       "Hardware": "Brushed gold",
       "Closure": "Dual zipper",
-      "Capacity": "Fits up to 13 inch laptop",
+      "Capacity": "Fits a tablet and daily notebook",
       "Warranty": "6 Months"
     }
   },

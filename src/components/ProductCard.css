@@ -1,231 +1,162 @@
 .product-card {
     display: flex;
+    min-height: 100%;
     flex-direction: column;
     overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 8px;
     transition: var(--transition);
-    height: 100%;
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(102, 252, 241, 0.15);
-    border-color: rgba(102, 252, 241, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 22px 50px rgba(31, 61, 53, 0.12);
+}
+
+.card-image-link {
+    color: inherit;
 }
 
 .image-container {
-    height: 220px;
-    width: 100%;
-    overflow: hidden;
     position: relative;
-    background: rgba(255, 255, 255, 0.02);
     display: flex;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     align-items: center;
     justify-content: center;
-    padding: 16px;
+    overflow: hidden;
+    background: #ede5d9;
 }
 
 .image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
 }
 
 .product-card:hover .image-container img {
-    transform: scale(1.08);
+    transform: scale(1.045);
+}
+
+.promo-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    border-radius: 999px;
+    background: var(--sale);
+    color: #fff;
+    padding: 6px 11px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .card-content {
-    padding: 24px;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    flex-grow: 1;
+    padding: 18px;
+}
+
+.card-kicker {
+    margin-bottom: 7px;
+    color: var(--accent);
+    font-size: 0.73rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .card-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    line-height: 1.4;
-}
-
-.card-title a {
+    min-height: 52px;
+    margin-bottom: 8px;
     color: var(--text-light);
-    text-decoration: none;
+    font-size: 1.03rem;
+    font-weight: 800;
+    line-height: 1.28;
 }
 
 .card-title a:hover {
-    color: var(--accent);
-    text-shadow: none;
-}
-
-.card-specs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
-.spec-badge {
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-.spec-badge.cpu {
-    background: rgba(94, 96, 206, 0.2);
-    color: #aeb0ff;
-    border: 1px solid rgba(94, 96, 206, 0.4);
-}
-
-.spec-badge.brand {
-    background: rgba(100, 223, 223, 0.2);
-    color: var(--accent);
-    border: 1px solid rgba(100, 223, 223, 0.4);
+    color: var(--primary);
 }
 
 .card-desc {
-    font-size: 0.85rem;
-    color: #8c8f92;
-    margin-bottom: 24px;
-    flex-grow: 1;
+    min-height: 42px;
+    color: var(--muted);
+    font-size: 0.88rem;
 }
 
 .card-footer {
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
-    align-items: center;
+    gap: 14px;
     margin-top: auto;
-    padding-top: 16px;
-    border-top: 1px solid var(--surface-border);
-}
-
-.card-price {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--accent);
-    text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
-}
-
-.order-btn {
-    background: rgba(102, 252, 241, 0.1);
-    color: var(--accent);
-    border: 1px solid rgba(102, 252, 241, 0.3);
-}
-
-.order-btn:hover {
-    background: var(--accent);
-    color: var(--background);
-    transform: scale(1.1);
-}
-
-.order-btn.added {
-    background: #1bc059;
-    color: white;
-    border-color: #1bc059;
-    transform: scale(1.05);
-}
-
-/* --- Promo Animations & Styles --- */
-.promo-badge {
-    position: absolute;
-    top: 15px;
-    right: -35px;
-    background: linear-gradient(45deg, #ff0f7b, #f89b29);
-    color: white;
-    padding: 6px 40px;
-    font-size: 0.9rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    transform: rotate(45deg);
-    box-shadow: 0 4px 15px rgba(255, 15, 123, 0.5);
-    z-index: 10;
-    animation: pulse-badge 1.5s infinite alternate, shimmer 3s infinite linear;
-    letter-spacing: 2px;
-}
-
-@keyframes pulse-badge {
-    0% {
-        transform: rotate(45deg) scale(1);
-    }
-
-    100% {
-        transform: rotate(45deg) scale(1.05);
-        box-shadow: 0 6px 20px rgba(255, 15, 123, 0.8);
-    }
-}
-
-@keyframes shimmer {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-
-    100% {
-        filter: hue-rotate(30deg);
-    }
+    padding-top: 18px;
 }
 
 .price-container {
     display: flex;
+    min-width: 0;
     flex-direction: column;
-    gap: 2px;
 }
 
 .old-price {
-    font-size: 0.85rem;
-    color: #8c8f92;
+    color: var(--muted);
+    font-size: 0.78rem;
     text-decoration: line-through;
 }
 
-.glowing-price {
-    color: #ff4757;
-    text-shadow: 0 0 10px rgba(255, 71, 87, 0.6), 0 0 20px rgba(255, 71, 87, 0.4);
-    animation: glow-pulse 2s infinite alternate;
+.card-price {
+    color: var(--text-light);
+    font-size: 1.12rem;
+    font-weight: 900;
 }
 
-@keyframes glow-pulse {
-    0% {
-        text-shadow: 0 0 10px rgba(255, 71, 87, 0.6), 0 0 20px rgba(255, 71, 87, 0.4);
-    }
+.card-actions {
+    display: flex;
+    gap: 8px;
+}
 
-    100% {
-        text-shadow: 0 0 15px rgba(255, 71, 87, 0.9), 0 0 30px rgba(255, 71, 87, 0.6), 0 0 40px rgba(255, 71, 87, 0.4);
-    }
+.details-btn,
+.order-btn {
+    background: var(--surface-soft);
+    color: var(--text-light);
+}
+
+.order-btn:hover,
+.details-btn:hover {
+    background: var(--primary);
+    color: #fffaf2;
+}
+
+.order-btn.added {
+    background: var(--primary);
+    color: #fffaf2;
 }
 
 @media (max-width: 768px) {
-    .image-container {
-        height: 140px;
-        padding: 8px;
-    }
-
     .card-content {
-        padding: 12px;
+        padding: 13px;
     }
 
     .card-title {
-        font-size: 0.95rem;
-        margin-bottom: 8px;
+        min-height: 48px;
+        font-size: 0.92rem;
     }
 
     .card-desc {
-        display: none;
-        /* Hide to save space */
+        min-height: auto;
+        font-size: 0.78rem;
     }
 
     .card-price {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
-    .spec-badge {
-        font-size: 0.65rem;
-        padding: 2px 6px;
-    }
-
-    .order-btn {
-        padding: 6px;
+    .details-btn {
+        display: none;
     }
 }

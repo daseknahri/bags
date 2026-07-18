@@ -10,7 +10,7 @@ const EMPTY_FORM = {
     description: '',
     promotion: false,
     images: [''],
-    specs: [{ key: 'Brand', value: '' }, { key: 'Category', value: 'Laptops' }],
+    specs: [{ key: 'Brand', value: 'PuaFeli' }, { key: 'Category', value: 'Tote Bags' }, { key: 'Material', value: '' }],
 };
 
 // Helper: convert specs array [{key,value}] <-> object {Brand:'HP'}
@@ -89,7 +89,7 @@ const AdminProducts = () => {
             await api.updateProduct(editingId, payload);
             showToast('Product updated successfully!');
         } else {
-            await api.createProduct({ ...payload, id: 'pcp-' + Date.now() });
+            await api.createProduct({ ...payload, id: 'pf-' + Date.now() });
             showToast('Product created successfully!');
         }
         handleCloseModal();
@@ -104,7 +104,7 @@ const AdminProducts = () => {
         }
     };
 
-    /* ─── Image helpers ─── */
+    /* Image helpers */
     const [uploadingImage, setUploadingImage] = useState(false);
 
     const addImage = () => setFormData(f => ({ ...f, images: [...f.images, ''] }));
@@ -127,7 +127,7 @@ const AdminProducts = () => {
         }
     };
 
-    /* ─── Spec helpers ─── */
+    /* Spec helpers */
     const addSpec = () => setFormData(f => ({ ...f, specs: [...f.specs, { key: '', value: '' }] }));
     const removeSpec = (i) => setFormData(f => ({ ...f, specs: f.specs.filter((_, idx) => idx !== i) }));
     const updateSpec = (i, field, val) =>
@@ -138,7 +138,7 @@ const AdminProducts = () => {
         p.specs?.Category?.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    if (loading) return <div className="admin-loading">Loading catalog…</div>;
+    if (loading) return <div className="admin-loading">Loading catalog...</div>;
 
     return (
         <div className="admin-products animate-fade-in">
@@ -157,7 +157,7 @@ const AdminProducts = () => {
             <input
                 className="admin-search"
                 type="text"
-                placeholder="Search by name or category…"
+                placeholder="Search by name or category..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
             />
@@ -196,7 +196,7 @@ const AdminProducts = () => {
                 {filtered.length === 0 && <p style={{ color: 'var(--text-main)' }}>No products found.</p>}
             </div>
 
-            {/* ─── Edit / Add Modal ─── */}
+            {/* Edit / Add Modal */}
             {isModalOpen && (
                 <div className="admin-modal-overlay" onClick={(e) => { if (e.target.className === 'admin-modal-overlay') handleCloseModal(); }}>
                     <div className="admin-modal glass-panel product-modal">
@@ -213,12 +213,12 @@ const AdminProducts = () => {
                                 <h3 className="form-section-title">Basic Details</h3>
                                 <div className="form-group">
                                     <label>Product Title *</label>
-                                    <input required className="admin-input" type="text" placeholder="e.g. HP ProBook 450 G10"
+                                    <input required className="admin-input" type="text" placeholder="e.g. PuaFeli Canvas Tote"
                                         value={formData.title} onChange={e => setFormData({ ...formData, title: e.target.value })} />
                                 </div>
                                 <div className="form-group">
                                     <label>Description *</label>
-                                    <textarea required className="admin-textarea" rows="3" placeholder="Describe the product…"
+                                    <textarea required className="admin-textarea" rows="3" placeholder="Describe the product..."
                                         value={formData.description} onChange={e => setFormData({ ...formData, description: e.target.value })} />
                                 </div>
                             </div>
@@ -281,7 +281,7 @@ const AdminProducts = () => {
                                     <h3 className="form-section-title"><Tag size={18} /> Specifications</h3>
                                     <button type="button" className="btn-add-row" onClick={addSpec}>+ Add Spec</button>
                                 </div>
-                                <p className="form-hint">Add as many specs as you want (e.g. CPU → Intel i7, RAM → 16GB).</p>
+                                <p className="form-hint">Add as many specs as you want (e.g. Material, Color, Strap, Closure).</p>
                                 <div className="specs-list">
                                     {formData.specs.map((spec, i) => (
                                         <div key={i} className="spec-row">
@@ -307,7 +307,7 @@ const AdminProducts = () => {
 
                             <div className="modal-actions">
                                 <button type="button" className="btn-secondary" onClick={handleCloseModal}>Cancel</button>
-                                <button type="submit" className="btn-primary">💾 Save Product</button>
+                                <button type="submit" className="btn-primary">Save Product</button>
                             </div>
                         </form>
                     </div>

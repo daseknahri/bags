@@ -4,8 +4,8 @@ import './About.css';
 
 const About = () => {
     const [aboutUs, setAboutUs] = useState({
-        mainImage: 'https://images.unsplash.com/photo-1531297172864-dd34cce46ad9?auto=format&fit=crop&q=80&w=800',
-        description: 'PC Paradise was founded with a singular vision: to curate the best premium technology products and provide an unparalleled shopping experience.'
+        mainImage: '/assets/bags/canvas-tote-set.png',
+        description: 'PuaFeli curates polished bags for daily movement: structured totes, compact crossbodies, refined clutches, and travel-ready accessories selected for texture, function, and quiet elegance.'
     });
 
     useEffect(() => {
@@ -22,43 +22,41 @@ const About = () => {
     return (
         <div className="about-page container animate-fade-in">
             <div className="about-hero">
-                <h1>About <span className="accent">PC Paradise</span></h1>
-                <p>Elevating your technology experience since 2018.</p>
+                <p className="about-kicker">PuaFeli studio</p>
+                <h1>Designed around the way you move.</h1>
+                <p>Calm silhouettes, useful capacity, and finishes that make daily outfits feel complete.</p>
             </div>
 
             <div className="about-content">
-                <div className="about-text glass-panel">
-                    <h2>Our Story</h2>
+                <div className="about-text">
+                    <h2>Our Point Of View</h2>
+                    <p>{aboutUs.description}</p>
                     <p>
-                        {aboutUs.description}
-                    </p>
-                    <p>
-                        We believe that the devices you use every day should be beautiful, powerful, and reliable.
-                        That's why we meticulously select every laptop, phone, and accessory in our catalog, ensuring
-                        they meet strict standards of quality and design.
+                        Every piece is selected for practical carry, clean construction, and easy styling.
+                        We focus on bags that look polished in photos and still work hard in real life.
                     </p>
                 </div>
 
-                <div className="about-image glass-panel">
+                <div className="about-image">
                     <img
                         src={api.resolveMediaUrl(aboutUs.mainImage)}
-                        alt="Inside PC Paradise Store"
+                        alt="PuaFeli canvas tote and accessories"
                     />
                 </div>
             </div>
 
             <div className="values-grid">
-                <div className="value-card glass-panel">
-                    <h3>Premium Quality</h3>
-                    <p>We source only original, top-tier products from world-renowned brands.</p>
+                <div className="value-card">
+                    <h3>Material Led</h3>
+                    <p>Canvas, raffia, satin, and pebbled textures chosen for depth and daily resilience.</p>
                 </div>
-                <div className="value-card glass-panel">
-                    <h3>Expert Advice</h3>
-                    <p>Our team of tech specialists is always ready to help you find the perfect device.</p>
+                <div className="value-card">
+                    <h3>Easy Ordering</h3>
+                    <p>Add pieces to the cart and send a WhatsApp order for availability and delivery details.</p>
                 </div>
-                <div className="value-card glass-panel">
-                    <h3>Secure Shopping</h3>
-                    <p>Enjoy peace of mind with our secure checkout and comprehensive warranties.</p>
+                <div className="value-card">
+                    <h3>Client Ready</h3>
+                    <p>Clean product pages, local imagery, and editable admin content for a real handoff.</p>
                 </div>
             </div>
         </div>

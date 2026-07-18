@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ShoppingCart, ArrowLeft, Heart, Shield, Truck, RotateCcw, ChevronLeft, ChevronRight, X, ZoomIn, Check } from 'lucide-react';
@@ -18,10 +18,10 @@ const ProductDetail = () => {
     const { addItem } = useCart();
 
     useEffect(() => {
-        api.getProduct(id).then(foundProduct => {
+        api.getProduct(id).then((foundProduct) => {
             if (foundProduct) {
                 setProduct(foundProduct);
-                setMainImage(foundProduct.images[0] || '');
+                setMainImage(foundProduct.images?.[0] || '');
             }
         });
     }, [id]);
@@ -29,43 +29,50 @@ const ProductDetail = () => {
     const images = product?.images?.filter(Boolean) || [];
 
     const openLightbox = (idx) => {
-        setLightboxIndex(idx);
+        setLightboxIndex(Math.max(0, idx));
         setLightboxOpen(true);
     };
 
     const closeLightbox = () => setLightboxOpen(false);
 
     const prevImage = useCallback(() => {
-        setLightboxIndex(i => (i - 1 + images.length) % images.length);
+        setLightboxIndex((i) => (i - 1 + images.length) % images.length);
     }, [images.length]);
 
     const nextImage = useCallback(() => {
-        setLightboxIndex(i => (i + 1) % images.length);
+        setLightboxIndex((i) => (i + 1) % images.length);
     }, [images.length]);
 
-    // Keyboard navigation
     useEffect(() => {
-        if (!lightboxOpen) return;
-        const handler = (e) => {
-            if (e.key === 'ArrowLeft') prevImage();
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'Escape') closeLightbox();
+        if (!lightboxOpen) return undefined;
+        const handler = (event) => {
+            if (event.key === 'ArrowLeft') prevImage();
+            if (event.key === 'ArrowRight') nextImage();
+            if (event.key === 'Escape') closeLightbox();
         };
         window.addEventListener('keydown', handler);
         return () => window.removeEventListener('keydown', handler);
-    }, [lightboxOpen, prevImage, nextImage]);
+    }, [lightboxOpen, nextImage, prevImage]);
 
-    if (!product) return (
-        <div className="loading-state container">
-            <div className="loading-spinner" />
-            Loading product…
-        </div>
-    );
+    if (!product) {
+        return (
+            <div className="loading-state container">
+                <div className="loading-spinner" />
+                Loading product...
+            </div>
+        );
+    }
+
+    const handleAdd = () => {
+        addItem(product);
+        setAddedToast(true);
+        setTimeout(() => setAddedToast(false), 2200);
+    };
 
     return (
         <div className="product-detail-page container animate-fade-in">
             <Helmet>
-                <title>{product.title} | PC Paradise</title>
+                <title>{product.title} | PuaFeli</title>
                 <meta name="description" content={product.description?.substring(0, 160)} />
                 <meta property="og:title" content={product.title} />
                 <meta property="og:image" content={api.resolveMediaUrl(mainImage)} />
@@ -76,32 +83,30 @@ const ProductDetail = () => {
             </Link>
 
             <div className="product-detail-grid">
-                {/* ─── Gallery ─── */}
                 <div className="product-gallery">
-                    <div className="main-image-container glass-panel" onClick={() => openLightbox(images.indexOf(mainImage))}>
-                        {product.promotion && (
-                            <div className="detail-promo-badge">{t('product.promo')}</div>
-                        )}
+                    <button className="main-image-container" onClick={() => openLightbox(images.indexOf(mainImage))}>
+                        {product.promotion && <div className="detail-promo-badge">{t('product.promo')}</div>}
                         <img
                             src={api.resolveMediaUrl(mainImage)}
                             alt={product.title}
-                            onError={e => { e.target.src = 'https://placehold.co/600x400?text=No+Image'; }}
+                            onError={(event) => { event.currentTarget.src = 'https://placehold.co/700x700?text=Bag'; }}
                         />
-                        <div className="zoom-hint"><ZoomIn size={18} /> {t('product.clickToZoom')}</div>
-                    </div>
+                        <span className="zoom-hint"><ZoomIn size={18} /> {t('product.clickToZoom')}</span>
+                    </button>
 
                     {images.length > 1 && (
                         <div className="thumbnail-list">
                             {images.map((img, idx) => (
                                 <button
-                                    key={idx}
-                                    className={`thumbnail-btn glass-panel ${mainImage === img ? 'active' : ''}`}
+                                    key={img}
+                                    className={`thumbnail-btn ${mainImage === img ? 'active' : ''}`}
                                     onClick={() => setMainImage(img)}
+                                    aria-label={`View image ${idx + 1}`}
                                 >
                                     <img
                                         src={api.resolveMediaUrl(img)}
-                                        alt={`view ${idx + 1}`}
-                                        onError={e => { e.target.src = 'https://placehold.co/100x80?text=NA'; }}
+                                        alt={`${product.title} view ${idx + 1}`}
+                                        onError={(event) => { event.currentTarget.src = 'https://placehold.co/100x100?text=Bag'; }}
                                     />
                                 </button>
                             ))}
@@ -109,18 +114,19 @@ const ProductDetail = () => {
                     )}
                 </div>
 
-                {/* ─── Product Info ─── */}
-                <div className="product-info glass-panel">
+                <div className="product-info">
                     <div className="product-header">
-                        {product.specs?.Brand && <span className="brand-badge">{product.specs.Brand}</span>}
-                        {product.specs?.Category && <span className="category-badge">{product.specs.Category}</span>}
+                        <div className="badge-row">
+                            {product.specs?.Brand && <span className="brand-badge">{product.specs.Brand}</span>}
+                            {product.specs?.Category && <span className="category-badge">{product.specs.Category}</span>}
+                        </div>
                         <h1 className="product-title">{product.title}</h1>
 
                         <div className="price-block">
                             {product.promotion && product.discountPrice ? (
                                 <>
                                     <span className="price-original">{product.price}</span>
-                                    <span className="price-discounted detail-glowing-price">{product.discountPrice}</span>
+                                    <span className="price-discounted">{product.discountPrice}</span>
                                     <span className="promo-label">{t('product.sale')}</span>
                                 </>
                             ) : (
@@ -132,28 +138,23 @@ const ProductDetail = () => {
                     <p className="product-description">{product.description}</p>
 
                     <div className="action-buttons">
-                        <button className={`btn-primary main-action ${addedToast ? 'added' : ''}`} onClick={() => {
-                            addItem(product);
-                            setAddedToast(true);
-                            setTimeout(() => setAddedToast(false), 2500);
-                        }}>
+                        <button className={`btn-primary main-action ${addedToast ? 'added' : ''}`} onClick={handleAdd}>
                             {addedToast ? <><Check size={20} /> {t('product.added')}</> : <><ShoppingCart size={20} /> {t('product.addToCart')}</>}
                         </button>
-                        <button className="icon-btn wishlist-btn" title="Add to Wishlist">
-                            <Heart size={24} />
+                        <button className="icon-btn wishlist-btn" title="Add to wishlist" aria-label="Add to wishlist">
+                            <Heart size={22} />
                         </button>
                     </div>
 
                     <div className="feature-list">
-                        <div className="feature-item"><Shield size={18} className="feature-icon" /><span>1 Year Warranty</span></div>
-                        <div className="feature-item"><Truck size={18} className="feature-icon" /><span>Free Delivery in Morocco</span></div>
-                        <div className="feature-item"><RotateCcw size={18} className="feature-icon" /><span>30-Day Returns</span></div>
+                        <div className="feature-item"><Shield size={18} className="feature-icon" /><span>Quality checked before dispatch</span></div>
+                        <div className="feature-item"><Truck size={18} className="feature-icon" /><span>Delivery available across Morocco</span></div>
+                        <div className="feature-item"><RotateCcw size={18} className="feature-icon" /><span>Exchange support within 7 days</span></div>
                     </div>
 
-                    {/* Specs Table */}
                     {Object.keys(product.specs || {}).length > 0 && (
                         <div className="specs-section">
-                            <h3>Specifications</h3>
+                            <h3>Product Details</h3>
                             <div className="specs-grid">
                                 {Object.entries(product.specs).map(([key, value]) => (
                                     <div key={key} className="spec-item">
@@ -167,27 +168,28 @@ const ProductDetail = () => {
                 </div>
             </div>
 
-            {/* ─── Lightbox ─── */}
             {lightboxOpen && (
                 <div className="lightbox-overlay" onClick={closeLightbox}>
-                    <button className="lightbox-close" onClick={closeLightbox}><X size={28} /></button>
+                    <button className="lightbox-close" onClick={closeLightbox} aria-label="Close image">
+                        <X size={28} />
+                    </button>
 
                     {images.length > 1 && (
-                        <button className="lightbox-nav prev" onClick={e => { e.stopPropagation(); prevImage(); }}>
+                        <button className="lightbox-nav prev" onClick={(event) => { event.stopPropagation(); prevImage(); }} aria-label="Previous image">
                             <ChevronLeft size={36} />
                         </button>
                     )}
 
-                    <div className="lightbox-img-wrapper" onClick={e => e.stopPropagation()}>
+                    <div className="lightbox-img-wrapper" onClick={(event) => event.stopPropagation()}>
                         <img
                             src={api.resolveMediaUrl(images[lightboxIndex])}
                             alt={`${product.title} image ${lightboxIndex + 1}`}
-                            onError={e => { e.target.src = 'https://placehold.co/800x600?text=No+Image'; }}
+                            onError={(event) => { event.currentTarget.src = 'https://placehold.co/900x900?text=Bag'; }}
                         />
                     </div>
 
                     {images.length > 1 && (
-                        <button className="lightbox-nav next" onClick={e => { e.stopPropagation(); nextImage(); }}>
+                        <button className="lightbox-nav next" onClick={(event) => { event.stopPropagation(); nextImage(); }} aria-label="Next image">
                             <ChevronRight size={36} />
                         </button>
                     )}

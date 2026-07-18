@@ -1,2 +1,2 @@
-require('../website-server.cjs');
+import '../website-server.cjs';
 

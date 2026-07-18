@@ -81,7 +81,7 @@ app.post('/api/products', requireAuth, (req, res) => {
   const products = readProducts();
   const newProduct = {
     ...req.body,
-    id: typeof req.body?.id === 'string' && req.body.id ? req.body.id : `pcp-${Date.now()}`
+    id: typeof req.body?.id === 'string' && req.body.id ? req.body.id : `pf-${Date.now()}`
   };
   products.unshift(newProduct);
   writeProducts(products);
@@ -200,5 +200,5 @@ app.use((error, _req, res, _next) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`PC admin server running on 0.0.0.0:${port}`);
+  console.log(`PuaFeli admin server running on 0.0.0.0:${port}`);
 });

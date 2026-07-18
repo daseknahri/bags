@@ -1,79 +1,81 @@
 .location-page {
-    padding-top: 100px;
-    padding-bottom: 80px;
+    padding-top: 124px;
+    padding-bottom: 82px;
 }
 
 .location-hero {
-    text-align: center;
-    margin-bottom: 60px;
+    max-width: 740px;
+    margin-bottom: 46px;
 }
 
 .location-hero h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
+    color: var(--text-light);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 0.96;
 }
 
 .location-hero p {
-    font-size: 1.2rem;
     color: var(--text-main);
+    font-size: 1.05rem;
 }
 
 .location-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
+    grid-template-columns: minmax(280px, 0.7fr) minmax(360px, 1.3fr);
+    gap: 28px;
     align-items: stretch;
-}
-
-@media (max-width: 968px) {
-    .location-content {
-        grid-template-columns: 1fr;
-    }
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
 }
 
 .info-card {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
-    padding: 24px;
+    gap: 16px;
+    padding: 20px;
 }
 
 .info-icon {
-    background: rgba(102, 252, 241, 0.1);
-    color: var(--accent);
-    padding: 16px;
-    border-radius: 50%;
     display: flex;
-    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
     align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--surface-soft);
+    color: var(--primary);
 }
 
 .info-card h3 {
-    font-size: 1.2rem;
+    margin-bottom: 5px;
     color: var(--text-light);
-    margin-bottom: 8px;
+    font-size: 1rem;
 }
 
 .info-card p {
     color: var(--text-main);
-    line-height: 1.6;
 }
 
 .map-container {
     min-height: 500px;
-    padding: 8px;
-    /* So the iframe has a nice glass border around it */
-    border-radius: var(--radius);
     overflow: hidden;
+    border-radius: 8px;
+    padding: 7px;
 }
 
 .map-container iframe {
-    border-radius: calc(var(--radius) - 8px);
+    border-radius: 6px;
+}
+
+@media (max-width: 880px) {
+    .location-content {
+        grid-template-columns: 1fr;
+    }
 }

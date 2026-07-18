@@ -27,7 +27,7 @@ const Promotions = () => {
 
     return (
         <div className="promotions-page container animate-fade-in">
-            <div className="promotions-hero glass-panel">
+            <div className="promotions-hero">
                 <div className="promo-badge">
                     <Tag size={24} />
                     <span>{t('promo.specialOffers')}</span>

@@ -26,7 +26,7 @@ const AdminPanel = () => {
                 const session = await api.getAdminSession();
                 if (!active) return;
                 setIsAuthenticated(Boolean(session?.authenticated));
-            } catch (_error) {
+            } catch {
                 if (!active) return;
                 setIsAuthenticated(false);
             } finally {
@@ -39,12 +39,12 @@ const AdminPanel = () => {
             navigate('/admin');
         };
 
-        window.addEventListener('pc-admin-auth-required', handleAuthRequired);
+        window.addEventListener('puafeli-admin-auth-required', handleAuthRequired);
         void syncSession();
 
         return () => {
             active = false;
-            window.removeEventListener('pc-admin-auth-required', handleAuthRequired);
+            window.removeEventListener('puafeli-admin-auth-required', handleAuthRequired);
         };
     }, [navigate]);
 
@@ -56,16 +56,13 @@ const AdminPanel = () => {
             if (res.ok) {
                 setIsAuthenticated(true);
             }
-        } catch (err) {
+        } catch {
             setLoginError('Invalid username or password');
         }
     };
 
     const handleLogout = async () => {
-        try {
-            await api.logout();
-        } catch (_error) {
-        }
+        await api.logout().catch(() => undefined);
         setIsAuthenticated(false);
         navigate('/admin');
     };
@@ -154,7 +151,7 @@ const AdminPanel = () => {
 
             <main className="admin-main">
                 <Routes>
-                    <Route path="/" element={<div className="admin-welcome"><h2>Welcome to PC Paradise Admin</h2><p>Select a category from the sidebar to start managing your content.</p></div>} />
+                    <Route path="/" element={<div className="admin-welcome"><h2>Welcome to PuaFeli Admin</h2><p>Select a category from the sidebar to start managing your products, offers, journal, and settings.</p></div>} />
                     <Route path="/products" element={<AdminProducts />} />
                     <Route path="/promotions" element={<AdminPromotions />} />
                     <Route path="/blogs" element={<AdminBlogs />} />

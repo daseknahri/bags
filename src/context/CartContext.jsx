@@ -25,13 +25,13 @@ const cartReducer = (state, action) => {
 
 export const CartProvider = ({ children }) => {
     const [cart, dispatch] = useReducer(cartReducer, [], () => {
-        try { return JSON.parse(localStorage.getItem('pcparadise_cart')) || []; }
+        try { return JSON.parse(localStorage.getItem('puafeli_cart')) || []; }
         catch { return []; }
     });
 
     // Persist to localStorage on every change
     useEffect(() => {
-        localStorage.setItem('pcparadise_cart', JSON.stringify(cart));
+        localStorage.setItem('puafeli_cart', JSON.stringify(cart));
     }, [cart]);
 
     const addItem = (product) => {
@@ -62,4 +62,5 @@ export const CartProvider = ({ children }) => {
     );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useCart = () => useContext(CartContext);
