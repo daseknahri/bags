@@ -1,899 +1,127 @@
 [
   {
-    "id": "pcp-0001",
-    "url": "https://www.pcparadise.ma/product/samsung-galaxy-pro--pcp-0001/",
-    "title": "Samsung Galaxy PRO",
-    "description": "i5 12ᵉ génération avec écran OLED. Design fin et performance moderne.",
-    "price": "5,499.00 DHs",
-    "images": [
-      "https://ressi.ru/upload/iblock/ced/7ptvxdr03hehqop9omle0ren485zqog0/5583a4296e5295be8c18b72935c6727d.jpg",
-      "https://digitik.ru/upload/iblock/718/718c862db7b99cd64b0f79427fdab39b.jpg",
-      "https://content.etilize.com/3000/1069228585.jpg"
-    ],
-    "specs": {
-      "Brand": "Samsung",
-      "CPU": "i5 12th Generation - 1240P",
-      "Type": "Premium ⭐",
-      "Configuration": "16GB / 512GB SSD / OLED",
-      "Screen": "14,1″ OLED",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0002",
-    "url": "https://www.pcparadise.ma/product/hp-dragonfly-g4--pcp-0002/",
-    "title": "HP Dragonfly G4",
-    "description": "i7 13ᵉ génération avec 32 Go RAM. Ultraportable premium haut de gamme.",
-    "price": "9,450.00 DHs",
-    "images": [
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/8A461EA-ABF_9_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c08606336_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/8A461EA-ABF_10_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c08606397_1750x1285.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i7 13th Generation - 1365U",
-      "Type": "Premium ⭐",
-      "Configuration": "32GB / 512GB SSD",
-      "Screen": "13,5″",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0013",
-    "url": "https://www.pcparadise.ma/product/lg-gram-16-superx--pcp-0013/",
-    "title": "LG Gram 16 SuperX",
-    "description": "Ultraléger 16″ Intel Core Ultra 7. Autonomie impressionnante et performances premium.",
-    "price": "8,900.00 DHs",
-    "images": [
-      "https://www.lg.com/content/dam/channel/wcms/uk/images/laptops/16Z90Q-K_AR56A1_EEUK_UK_C/gallery/large02.jpg",
-      "https://www.lg.com/content/dam/channel/wcms/uk/images/laptops/16Z90Q-K_AR56A1_EEUK_UK_C/gallery/large03.jpg",
-      "https://www.lg.com/content/dam/channel/wcms/uk/images/laptops/16Z90Q-K_AR56A1_EEUK_UK_C/gallery/large05.jpg",
-      "https://www.lg.com/content/dam/channel/wcms/uk/images/laptops/16Z90Q-K_AR56A1_EEUK_UK_C/gallery/large06.jpg",
-      "https://www.lg.com/content/dam/channel/wcms/uk/images/laptops/16Z90Q-K_AR56A1_EEUK_UK_C/gallery/large09.jpg",
-      "https://www.lg.com/content/dam/channel/wcms/uk/images/laptops/16Z90Q-K_AR56A1_EEUK_UK_C/gallery/large15.jpg"
-    ],
-    "specs": {
-      "Brand": "LG",
-      "CPU": "Ultra7 Intel Core Ultra - 155H",
-      "Type": "Premium ⭐",
-      "Configuration": "16Gb DDR5 RAM 512SSD",
-      "Screen": "16,0″ OLED 2K",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    },
-    "promotion": true,
-    "discountPrice": "756,500.00 DHs"
-  },
-  {
-    "id": "pcp-0004",
-    "url": "https://www.pcparadise.ma/product/vant-laptop--pcp-0004/",
-    "title": "VANT Laptop",
-    "description": "i5 12ᵉ génération moderne avec SSD rapide.",
-    "price": "3,299.00 DHs",
-    "images": [
-      "https://www.vantpc.es/wp-content/uploads/2023/12/Mesa-de-trabajo-5.jpg",
-      "https://www.vantpc.es/wp-content/uploads/2023/12/Mesa-de-trabajo-7.jpg",
-      "https://www.vantpc.es/wp-content/uploads/2023/12/Mesa-de-trabajo-6.jpg",
-      "https://www.vantpc.es/wp-content/uploads/2023/12/Mesa-de-trabajo-4.jpg"
-    ],
-    "specs": {
-      "Brand": "Vant",
-      "CPU": "i5 12th Generation - 1235U",
-      "Type": "Smart Choice",
-      "Configuration": "8GB / 512GB SSD",
-      "Screen": "15,6″",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0018",
-    "url": "https://www.pcparadise.ma/product/all-in-one-lenovo-7th-generation--pcp-0018/",
-    "title": "All In One - Lenovo (7th Generation)",
-    "description": "PC tout-en-un élégant i5 7ᵉ génération. Gain d’espace et performance stable.",
-    "price": "2,650.00 DHs",
-    "images": [
-      "https://media.tera.ma/wp-content/uploads/2025/03/Lenovo-21.5-LED-Thinkcentre-Tiny-in-One-22-4.jpg"
-    ],
-    "specs": {
-      "Brand": "Lenovo",
-      "CPU": "i5 7th Generation - 7500T",
-      "Type": "Desktop, Ecran, AIO",
-      "Configuration": "8Gb RAM 256SSD",
-      "Screen": "Lenovo 22p Framless",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0006",
-    "url": "https://www.pcparadise.ma/product/huawei-laptop--pcp-0006/",
-    "title": "Huawei Laptop",
-    "description": "Ryzen 5 Série 3000 compact et efficace pour usage quotidien.",
-    "price": "2,799.00 DHs",
-    "images": [
-      "https://avatars.mds.yandex.net/get-mpic/11483862/2a0000018fbf644b2708f1315d9d0da9e35b/orig"
-    ],
-    "specs": {
-      "Brand": "Huawei",
-      "CPU": "Ryzen5 Ryzen 3000 - 3500U",
-      "Type": "Smart Choice",
-      "Configuration": "8GB / 256GB SSD",
-      "Screen": "15,6″",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    },
-    "promotion": true,
-    "discountPrice": "237,915.00 DHs"
-  },
-  {
-    "id": "pcp-0007",
-    "url": "https://www.pcparadise.ma/product/acer-aspire--pcp-0007/",
-    "title": "Acer Aspire",
-    "description": "i7 11ᵉ génération polyvalent et rapide.",
-    "price": "3,499.00 DHs",
-    "images": [
-      "https://media.tera.ma/wp-content/uploads/2025/03/ACER-Aspire-A515-56-72DA-i7.jpg",
-      "https://media.tera.ma/wp-content/uploads/2025/03/ACER-Aspire-A515-56-72DA-4.jpg",
-      "https://media.tera.ma/wp-content/uploads/2025/03/ACER-Aspire-A515-56-72DA-3.jpg",
-      "https://media.tera.ma/wp-content/uploads/2025/03/ACER-Aspire-A515-56-72DA-5.jpg"
-    ],
-    "specs": {
-      "Brand": "Acer",
-      "CPU": "i7 11th Generation - 1165G7",
-      "Type": "Smart Choice",
-      "Configuration": "8GB / 512GB SSD",
-      "Screen": "15,6″",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0008",
-    "url": "https://www.pcparadise.ma/product/asus-expertbook--pcp-0008/",
-    "title": "Asus ExpertBook",
-    "description": "i7 11ᵉ génération professionnel léger et fiable.",
-    "price": "4,199.00 DHs",
-    "images": [
-      "https://www.mediazone.ma/product/images/15077-n1ZXDcLI/asus-expertbook-b9400-i7-11eme-16go-512go-ssd-14p-fhd-start-black-maroc.webp",
-      "https://www.mediazone.ma/product/images/b9400cea-kc1203/thumbs/asus-expertbook-b9400-i7-11eme-16go-512go-ssd-14p-fhd-start-black-maroc-thumb-0C25BEEF-0D6C-F386-D6CB-6C3B90100983.webp",
-      "https://www.mediazone.ma/product/images/b9400cea-kc1203/thumbs/asus-expertbook-b9400-i7-11eme-16go-512go-ssd-14p-fhd-start-black-maroc-thumb-3AF997C3-2157-A374-7C61-D547695CDB10.webp",
-      "https://www.mediazone.ma/product/images/b9400cea-kc1203/thumbs/asus-expertbook-b9400-i7-11eme-16go-512go-ssd-14p-fhd-start-black-maroc-thumb-43EE5F20-45BB-E651-9273-B6380BC41415.webp",
-      "https://www.mediazone.ma/product/images/b9400cea-kc1203/thumbs/asus-expertbook-b9400-i7-11eme-16go-512go-ssd-14p-fhd-start-black-maroc-thumb-619E3D1B-BE74-0D59-86AD-58E28F39C4AF.webp"
-    ],
-    "specs": {
-      "Brand": "Asus",
-      "CPU": "i7 11th Generation - 1165G7",
-      "Type": "Performance Series",
-      "Configuration": "16GB / 512GB SSD",
-      "Screen": "15,6″",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0009",
-    "url": "https://www.pcparadise.ma/product/asus-vivobook--pcp-0009/",
-    "title": "Asus VivoBook",
-    "description": "i5 13ᵉ génération moderne pour usage quotidien performant.",
-    "price": "4,199.00 DHs",
-    "images": [
-      "https://laptopcare.lk/wp-content/uploads/2024/08/Untitled-design-1-2-1.jpg"
-    ],
-    "specs": {
-      "Brand": "Asus",
-      "CPU": "i5 13th Generation - 13th",
-      "Type": "Smart Choice",
-      "Configuration": "16GB / 512GB SSD",
-      "Screen": "15,6″",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0010",
-    "url": "https://www.pcparadise.ma/product/lenovo-thinkpad-t14s--pcp-0010/",
-    "title": "Lenovo ThinkPad T14s",
-    "description": "Ultraportable professionnel léger et performant. Son i5 10ᵉ génération et ses 16 Go de RAM assurent fluidité et autonomie idéale en déplacement.",
-    "price": "2,950.00 DHs",
-    "images": [
-      "https://www.lenovoarvutid.ee/wp-content/uploads/2021/05/16_Thinkpad_T14s_Gen_2_Tour_Birdseye_B_C_Cover.png"
-    ],
-    "specs": {
-      "Brand": "Lenovo",
-      "CPU": "i5 10th Generation - 10310U",
-      "Type": "Premium ⭐",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "14,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    },
-    "promotion": true,
-    "discountPrice": "250,750.00 DHs"
-  },
-  {
-    "id": "pcp-0011",
-    "url": "https://www.pcparadise.ma/product/acer-swift-sf314-61--pcp-0011/",
-    "title": "Acer Swift SF314-61",
-    "description": "Modèle 2025 avec 16 Go DDR5 et 1 To SSD. Léger, rapide et nouvelle génération.",
-    "price": "4,599.00 DHs",
-    "images": [
-      "https://ressi.ru/upload/iblock/358/zrf906dlheo8xdv6nqv0e6j7uvbovej1/28f88eb3942eb45e1e52d2b136d17123.jpg",
-      "https://ressi.ru/upload/resize_cache/iblock/b7f/amef9sgl98l83scgnmint4axpl8ichcz/340_340_140cd750bba9870f18aada2478b24840a/ea5279427c8cea455511f7ef634275dd.jpg",
-      "https://ressi.ru/upload/resize_cache/iblock/926/bfoehjel6b7ngo64yrw359mc23lyq5nk/340_340_140cd750bba9870f18aada2478b24840a/7d3731deb4885be8775f0df09ce2e9a7.jpg",
-      "https://ressi.ru/upload/resize_cache/iblock/222/2lu6mvkgiwpqd6ah1siqfal6j21bpkwi/340_340_140cd750bba9870f18aada2478b24840a/0bee35dece966a38faaf0def5406df75.jpg",
-      "https://ressi.ru/upload/resize_cache/iblock/640/3w9gsjoj2e6k165yxkwu039xkbinfsk1/340_340_140cd750bba9870f18aada2478b24840a/4b1f6f08ea57ceddcb557f1625385ccb.jpg"
-    ],
-    "specs": {
-      "Brand": "Acer",
-      "CPU": "2025 -",
-      "Type": "Smart Choice",
-      "Configuration": "16GB DDR5 / 1TB SSD",
-      "Screen": "14,0″",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0012",
-    "url": "https://www.pcparadise.ma/product/dell-latitude-5400--pcp-0012/",
-    "title": "Dell Latitude 5400",
-    "description": "Ordinateur professionnel robuste équipé d’un Intel Core i7 8ᵉ génération. Idéal pour la bureautique avancée et le multitâche quotidien grâce à son SSD rapide.",
-    "price": "2,500.00 DHs",
-    "images": [
-      "https://bm.market/upload-files/apl-1750202591ac39b5bd8616faac5189c112f9a794baee486ad1.jpg"
-    ],
-    "specs": {
-      "Brand": "Dell",
-      "CPU": "i7 8th Generation - 8650U",
-      "Type": "Performance Series",
-      "Configuration": "8Gb RAM 256SSD",
-      "Screen": "14,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0014",
-    "url": "https://www.pcparadise.ma/product/hp-elitebook-860-g9--pcp-0014/",
-    "title": "HP EliteBook 860 G9",
-    "description": "Grand écran 16″ avec i5 12ᵉ génération et DDR5. Confort et puissance professionnelle.",
-    "price": "4,990.00 DHs",
-    "images": [
-      "https://oriontech.ru/upload/iblock/a61/a61b958aaa0fbd86e77e513fe68faabd.png"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 12th Generation - 1235U",
-      "Type": "Premium ⭐",
-      "Configuration": "16Gb DDR5 512SSD",
-      "Screen": "16,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0015",
-    "url": "https://www.pcparadise.ma/product/hp-800-mini-g4--pcp-0015/",
-    "title": "HP 800 Mini G4",
-    "description": "Mini PC fiable i5 7ᵉ génération. Compact et silencieux pour postes administratifs.",
-    "price": "1,450.00 DHs",
-    "images": [
-      "https://media.tera.ma/wp-content/uploads/2025/03/HP-ELITEDESK-800-G3-600x600.jpg",
-      "https://accesscomputer.ma/media/cache/resolve/sylius_shop_product_original/9c/5c/bc25d837544602025d30e82ccc88.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 7th Generation - 7500",
-      "Type": "Desktop, Ecran, AIO",
-      "Configuration": "8Gb RAM 256SSD",
-      "Screen": "Unite Central Mini",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    },
-    "promotion": true,
-    "discountPrice": "123,250.00 DHs"
-  },
-  {
-    "id": "pcp-0016",
-    "url": "https://www.pcparadise.ma/product/hp-smart-tank-585--pcp-0016/",
-    "title": "HP Smart Tank 585",
-    "description": "Imprimante neuve 2025 avec 6 bouteilles incluses. Solution économique pour impression longue durée.",
-    "price": "1,650.00 DHs",
-    "images": [
-      "https://a.allegroimg.com/original/11cac9/e3d1d310433e97eb07e934940979/Drukarka-wielofunkcyjna-atramentowa-kolor-HP-Smart-Tank-580-AiO-1F3Y2A"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "2025 -",
-      "Type": "Desktop, Ecran, AIO",
-      "Configuration": "Neuf + 6 bouteille d'encre inclus (3ans d'impression)",
-      "Screen": "Jet d’encre couleur",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0017",
-    "url": "https://www.pcparadise.ma/product/hp-probook-650-g5--pcp-0017/",
-    "title": "HP ProBook 650 G5",
-    "description": "Portable professionnel 15,6″ i5 8ᵉ génération. Fiable pour travail quotidien et gestion.",
-    "price": "2,190.00 DHs",
-    "images": [
-      "https://www.portables.org/37154-large_default/hp-probook-650-g5.jpg",
-      "https://www.portables.org/34516-large_default/hp-probook-650-g5.jpg",
-      "https://www.portables.org/37153-large_default/hp-probook-650-g5.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 8th Generation - 8265U",
-      "Type": "Performance Series",
-      "Configuration": "8Gb RAM 256SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0019",
-    "url": "https://www.pcparadise.ma/product/all-in-one-lenovo-6th-generation--pcp-0019/",
-    "title": "All In One - Lenovo (6th Generation)",
-    "description": "Solution intégrée compacte i5 6ᵉ génération. Idéal pour bureaux et accueil.",
-    "price": "2,450.00 DHs",
-    "images": [
-      "https://media.tera.ma/wp-content/uploads/2025/03/Lenovo-21.5-LED-Thinkcentre-Tiny-in-One-22-4.jpg"
-    ],
-    "specs": {
-      "Brand": "Lenovo",
-      "CPU": "i5 6th Generation - 6500T",
-      "Type": "Desktop, Ecran, AIO",
-      "Configuration": "8Gb RAM 256SSD",
-      "Screen": "Lenovo 22p Framless",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0020",
-    "url": "https://www.pcparadise.ma/product/pack-complet-prestige--pcp-0020/",
-    "title": "Pack Complet Prestige",
-    "description": "Configuration bureau complète i5 6ᵉ génération 16 Go RAM. Confort et efficacité professionnelle.",
-    "price": "2,700.00 DHs",
-    "images": [
-      "https://hp.widen.net/content/ecszyowgkk/png/ecszyowgkk.png?w=800&h=600&dpi=72&color=ffffff00",
-      "https://techshopeg.com/image/cache/catalog/28854/HPEliteDisplayE24324InchIPSLEDFH-removebg-preview-550x550.png.webp",
-      "https://m.media-amazon.com/images/I/516GzFThMGL._AC_UF894,1000_QL80_.jpg",
-      "https://acisolutions.ma/storage/2024/04/s-l1200.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 6th Generation - 6500",
-      "Type": "Desktop, Ecran, AIO",
-      "Configuration": "16Gb RAM 256SSD",
-      "Screen": "24,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    },
-    "promotion": true,
-    "discountPrice": "229,500.00 DHs"
-  },
-  {
-    "id": "pcp-0021",
-    "url": "https://www.pcparadise.ma/product/dell-latitude-7410-carbon--pcp-0021/",
-    "title": "Dell Latitude 7410 Carbon",
-    "description": "Ultraportable premium finition carbone i5 10ᵉ génération. Léger et élégant pour mobilité professionnelle.",
-    "price": "2,890.00 DHs",
-    "images": [
-      "https://joutech.ma/wp-content/uploads/2025/03/71303105_9786517860-scaled.jpg",
-      "https://joutech.ma/wp-content/uploads/2025/03/71165077_2700980805-scaled.jpg",
-      "https://joutech.ma/wp-content/uploads/2025/03/71165077_9761090985-1-scaled.jpg"
-    ],
-    "specs": {
-      "Brand": "Dell",
-      "CPU": "i5 10th Generation - 10310U",
-      "Type": "Premium ⭐",
-      "Configuration": "16Gb RAM 256SSD",
-      "Screen": "14,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0022",
-    "url": "https://www.pcparadise.ma/product/hp-255-g8--pcp-0022/",
-    "title": "HP 255 G8",
-    "description": "Ryzen 5 Série 5000+, fluide et performant. Excellent rapport qualité-prix.",
-    "price": "2,950.00 DHs",
-    "images": [
-      "https://www.ryans.com/storage/products/main/hp-250-g8-intel-core-i3-1115g4-8gb-ram-1tb-hdd-51714195428.webp"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "Ryzen5 Serie 5000+ - 5500U",
-      "Type": "Smart Choice",
-      "Configuration": "16Gb RAM 256SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0023",
-    "url": "https://www.pcparadise.ma/product/hp-probook-450-g8--pcp-0023/",
-    "title": "HP ProBook 450 G8",
-    "description": "Modèle fiable i5 11ᵉ génération. Équilibre parfait entre performance et autonomie.",
-    "price": "3,375.00 DHs",
-    "images": [
-      "https://duga.ma/wp-content/uploads/2024/12/95712979_8487243915-1.jpg",
-      "https://duga.ma/wp-content/uploads/2024/12/95712979_7199558882.jpg",
-      "https://duga.ma/wp-content/uploads/2024/12/95712979_8771178279.jpg",
-      "https://duga.ma/wp-content/uploads/2024/12/95712979_3420091091.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 11th Generation - 1135G7",
-      "Type": "Performance Series",
-      "Configuration": "8Gb RAM 256SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0024",
-    "url": "https://www.pcparadise.ma/product/hp-250r-g9--pcp-0024/",
-    "title": "HP 250R G9 (خدوش بسيطة)",
-    "description": "i5 13ᵉ génération puissant et rapide. Idéal pour travail intensif moderne.",
-    "price": "3,450.00 DHs",
-    "images": [
-      "https://joutech.ma/wp-content/uploads/2025/03/aa7297ea1ecc53c0e7f357c43dacef14-scaled.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 13th Generation - 1335U",
-      "Type": "Smart Choice",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    },
-    "promotion": true,
-    "discountPrice": "293,250.00 DHs"
-  },
-  {
-    "id": "pcp-0025",
-    "url": "https://www.pcparadise.ma/product/lenovo-thinkpad-l14--pcp-0025/",
-    "title": "Lenovo ThinkPad L14",
-    "description": "Portable professionnel robuste i5 12ᵉ génération. Fiabilité et productivité assurées.",
-    "price": "3,950.00 DHs",
-    "images": [
-      "https://m.media-amazon.com/images/I/51ItN5WdetL._AC_UF1000,1000_QL80_.jpg"
-    ],
-    "specs": {
-      "Brand": "Lenovo",
-      "CPU": "i5 12th Generation - 1235U",
-      "Type": "Business",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "14,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    },
-    "promotion": true,
-    "discountPrice": "335,750.00 DHs"
-  },
-  {
-    "id": "pcp-0026",
-    "url": "https://www.pcparadise.ma/product/hp-pavilion--pcp-0026/",
-    "title": "HP Pavilion",
-    "description": "Design moderne i5 13ᵉ génération. Performance fluide pour usage polyvalent.",
-    "price": "4,300.00 DHs PROMO",
-    "images": [
-      "https://duga.ma/wp-content/uploads/2024/12/c130fae3199d3892402d2ccd8b82340b2753ad63-1.jpg",
-      "https://duga.ma/wp-content/uploads/2024/12/14edaec7847afef67004508d050e9de15e970fb3.jpg",
-      "https://duga.ma/wp-content/uploads/2024/12/17bcce8d0420f685e5801ae2272d960203c16568.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 13th Generation - 1335U",
-      "Type": "Smart Choice",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0027",
-    "url": "https://www.pcparadise.ma/product/hp-laptop-15--pcp-0027/",
-    "title": "HP Laptop 15",
-    "description": "i5 13ᵉ génération avec 1 To SSD. Stockage généreux et rapidité quotidienne.",
-    "price": "4,300.00 DHs PROMO",
-    "images": [
-      "https://www.mediazone.ma/product/images/18510-uH5EIRQP/ordinateur-portable-hp-laptop-15-i7-1355u-32go-1to-ssd-15.6-pouces-fhd-maroc.webp"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 13th Generation - 1334U",
-      "Type": "Smart Choice",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0028",
-    "url": "https://www.pcparadise.ma/product/dell-latitude-5440--pcp-0028/",
-    "title": "Dell Latitude 5440",
-    "description": "i5 13ᵉ génération professionnel. Compact et performant pour entreprise.",
-    "price": "4,250.00 DHs",
-    "images": [
-      "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/gray/notebook-latitude-14-5440-nt-gray-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=476&wid=677&qlt=100,1&resMode=sharp2&size=677,476&chrss=full"
-    ],
-    "specs": {
-      "Brand": "Dell",
-      "CPU": "i5 13th Generation - 1345U",
-      "Type": "Performance Series",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "14,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0029",
-    "url": "https://www.pcparadise.ma/product/dell-latitude-5530--pcp-0029/",
-    "title": "Dell Latitude 5530",
-    "description": "i5 12ᵉ génération avec 32 Go RAM. Multitâche intensif sans ralentissement.",
-    "price": "4,250.00 DHs",
-    "images": [
-      "https://itbdshop.com/wp-content/uploads/2024/11/dell-5530-5.jpg"
-    ],
-    "specs": {
-      "Brand": "Dell",
-      "CPU": "i5 12th Generation - 1245U",
-      "Type": "Performance Series",
-      "Configuration": "32Gb RAM 512SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0030",
-    "url": "https://www.pcparadise.ma/product/hp-pavilion-laptop-15--pcp-0030/",
-    "title": "HP Pavilion Laptop 15",
-    "description": "i7 11ᵉ génération performant. Idéal pour usage avancé et divertissement.",
-    "price": "4,250.00 DHs",
-    "images": [
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c06723351_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c06723267_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c06723285_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c06723369_1750x1285.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i7 11th Generation - 1195G7",
-      "Type": "Smart Choice",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    },
-    "promotion": true,
-    "discountPrice": "361,250.00 DHs"
-  },
-  {
-    "id": "pcp-0031",
-    "url": "https://www.pcparadise.ma/product/hp-probook-440-g10--pcp-0031/",
-    "title": "HP ProBook 440 G10",
-    "description": "i5 13ᵉ génération professionnel moderne et fiable.",
-    "price": "4,300.00 DHs PROMO",
-    "images": [
-      "https://duga.ma/wp-content/uploads/2025/12/B39P2AT.png",
-      "https://duga.ma/wp-content/uploads/2025/12/B39P2AT-2.png",
-      "https://duga.ma/wp-content/uploads/2025/12/B39P2AT-3-600x600.png",
-      "https://duga.ma/wp-content/uploads/2025/12/B39P2AT-4.png"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 13th Generation - 1335U",
-      "Type": "Performance Series",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "14,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0032",
-    "url": "https://www.pcparadise.ma/product/samsung-galaxy-book--pcp-0032/",
-    "title": "Samsung Galaxy Book",
-    "description": "i5 13ᵉ génération DDR5. Élégance et performance nouvelle génération.",
-    "price": "Out of Stock",
-    "images": [
-      "https://osaka.ma/wp-content/uploads/2024/08/SAMSUNG-GALAXY-BOOK3-5.png"
-    ],
-    "specs": {
-      "Brand": "Samsung",
-      "CPU": "i5 13th Generation - 1335U",
-      "Type": "Premium ⭐",
-      "Configuration": "16Gb DDR5 RAM 512SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0033",
-    "url": "https://www.pcparadise.ma/product/dell-latitude-5440--pcp-0033/",
-    "title": "Dell Latitude 5440",
-    "description": "i5 13ᵉ génération compact et robuste pour travail quotidien.",
-    "price": "4,300.00 DHs PROMO",
-    "images": [
-      "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-5440-laptop/media-gallery/gray/notebook-latitude-14-5440-nt-gray-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=476&wid=677&qlt=100,1&resMode=sharp2&size=677,476&chrss=full"
-    ],
-    "specs": {
-      "Brand": "Dell",
-      "CPU": "i5 13th Generation - 1335U",
-      "Type": "Performance Series",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "14,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0034",
-    "url": "https://www.pcparadise.ma/product/dell-latitude-5430--pcp-0034/",
-    "title": "Dell Latitude 5430",
-    "description": "i5 12ᵉ génération 32 Go RAM. Performance professionnelle renforcée.",
-    "price": "4,450.00 DHs",
-    "images": [
-      "https://evotrading.ma/wp-content/uploads/2022/09/ordinateur-portable-dell-latitude-5430-n208l5430mlk14emea-evotrading-casa-1.jpg"
-    ],
-    "specs": {
-      "Brand": "Dell",
-      "CPU": "i5 12th Generation - 1245U",
-      "Type": "Performance Series",
-      "Configuration": "32Gb RAM 512SSD",
-      "Screen": "14,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0035",
-    "url": "https://www.pcparadise.ma/product/hp-250-g8--pcp-0035/",
-    "title": "HP 250 G8",
-    "description": "i7 11ᵉ génération fiable pour multitâche fluide.",
-    "price": "4,150.00 DHs",
-    "images": [
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c07972042_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c07973396_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c07972013_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c06927595_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c06927748_1750x1285.jpg",
-      "https://www.hp.com/fr-fr/shop/Html/Merch/Images/c06927622_1750x1285.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i7 11th Generation - 1165G7",
-      "Type": "Smart Choice",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "15,6″ FHD",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    },
-    "promotion": true,
-    "discountPrice": "352,750.00 DHs"
-  },
-  {
-    "id": "pcp-0036",
-    "url": "https://www.pcparadise.ma/product/dell-latitude-5420--pcp-0036/",
-    "title": "Dell Latitude 5420",
-    "description": "i7 11ᵉ génération puissant et équilibré.",
-    "price": "4,150.00 DHs",
-    "images": [
-      "https://i.ebayimg.com/images/g/iJAAAOSwzzNlDL-P/s-l960.jpg"
-    ],
-    "specs": {
-      "Brand": "Dell",
-      "CPU": "i7 11th Generation - 1185G7",
-      "Type": "Performance Series",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "14,0″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0037",
-    "url": "https://www.pcparadise.ma/product/hp-probook-450-g10--pcp-0037/",
-    "title": "HP ProBook 450 G10",
-    "description": "i5 13ᵉ génération moderne pour productivité avancée.",
-    "price": "4,550.00 DHs",
-    "images": [
-      "https://joutech.ma/wp-content/uploads/2024/02/6788-db2-ORDINATEUR-PORTABLE-HP-Probook-450-G10-13Th-I5-816N8EA.jpg",
-      "https://joutech.ma/wp-content/uploads/2024/02/6789-098-ORDINATEUR-PORTABLE-HP-Probook-450-G10-13Th-I5-816N8EA.jpg",
-      "https://joutech.ma/wp-content/uploads/2024/02/6790-a87-ORDINATEUR-PORTABLE-HP-Probook-450-G10-13Th-I5-816N8EA.jpg"
-    ],
-    "specs": {
-      "Brand": "HP",
-      "CPU": "i5 13th Generation - 1335U",
-      "Type": "Performance Series",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "pcp-0038",
-    "url": "https://www.pcparadise.ma/product/dell-latitude-5520--pcp-0038/",
-    "title": "Dell Latitude 5520",
-    "description": "i7 11ᵉ génération performant et professionnel.",
-    "price": "4,350.00 DHs",
-    "images": [
-      "https://cdn.cs.1worldsync.com/syndication/mediaserverredirect/b2131fd59f43c923ecc2a23e9b798ed8/width(3000).jpg"
-    ],
-    "specs": {
-      "Brand": "Dell",
-      "CPU": "i7 11th Generation - 1185G7",
-      "Type": "Performance Series",
-      "Configuration": "16Gb RAM 512SSD",
-      "Screen": "15,6″ FHD IPS",
-      "Quality": "⭐⭐⭐⭐",
-      "Guaranty": "4 Months",
-      "Category": "Laptops"
-    }
-  },
-  {
-    "id": "iphone-15-pro",
+    "id": "pf-canvas-tote-set",
     "url": "#",
-    "title": "iPhone 15 Pro",
-    "description": "Forged in titanium and featuring the groundbreaking A17 Pro chip, a customizable Action button, and a more versatile Pro camera system.",
-    "price": "12,999.00 DHs",
+    "title": "PuaFeli Canvas Tote & Accessories Set",
+    "description": "A refined everyday tote in textured cream canvas, paired with a matching wallet and detachable strap for workdays, errands, and weekend plans.",
+    "price": "890.00 DHs",
     "images": [
-      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=800"
+      "/assets/bags/canvas-tote-set.png"
     ],
     "specs": {
-      "Category": "Phones",
-      "Brand": "Apple",
-      "Storage": "256GB"
+      "Category": "Tote Bags",
+      "Brand": "PuaFeli",
+      "Material": "Textured canvas with vegan leather trim",
+      "Color": "Cream",
+      "Hardware": "Champagne gold",
+      "Closure": "Magnetic snap",
+      "Included": "Wallet and detachable strap",
+      "Warranty": "6 Months"
     },
     "promotion": true,
-    "discountPrice": "11,500.00 DHs"
+    "discountPrice": "790.00 DHs"
   },
   {
-    "id": "samsung-s24-ultra",
+    "id": "pf-noir-crossbody",
     "url": "#",
-    "title": "Samsung Galaxy S24 Ultra",
-    "description": "Welcome to the era of mobile AI. Galaxy S24 Ultra unleashes new levels of creativity, productivity, and possibility.",
-    "price": "13,499.00 DHs",
+    "title": "PuaFeli Noir Crossbody",
+    "description": "A compact black crossbody with a structured silhouette, adjustable strap, and polished clasp for hands-free daily styling.",
+    "price": "620.00 DHs",
     "images": [
-      "https://images.unsplash.com/photo-1707920150495-9bfded9541a4?auto=format&fit=crop&q=80&w=800"
+      "/assets/bags/black-crossbody.png"
     ],
     "specs": {
-      "Category": "Phones",
-      "Brand": "Samsung",
-      "Storage": "512GB"
+      "Category": "Crossbody Bags",
+      "Brand": "PuaFeli",
+      "Material": "Pebbled vegan leather",
+      "Color": "Black",
+      "Hardware": "Gold",
+      "Closure": "Front clasp",
+      "Strap": "Adjustable shoulder strap",
+      "Warranty": "6 Months"
     }
   },
   {
-    "id": "airpods-pro-2",
+    "id": "pf-cognac-backpack",
     "url": "#",
-    "title": "AirPods Pro (2nd Generation)",
-    "description": "Up to 2x more Active Noise Cancellation than the previous generation. Transparency mode lets you hear the world around you.",
-    "price": "2,799.00 DHs",
+    "title": "PuaFeli Cognac City Backpack",
+    "description": "A slim leather backpack with a laptop-friendly interior, top handle, and secure zipper pockets for polished commuting.",
+    "price": "980.00 DHs",
     "images": [
-      "https://images.unsplash.com/photo-1628202926206-c63a34b19fb4?auto=format&fit=crop&q=80&w=800"
+      "/assets/bags/cognac-backpack.png"
+    ],
+    "specs": {
+      "Category": "Backpacks",
+      "Brand": "PuaFeli",
+      "Material": "Pebbled vegan leather",
+      "Color": "Cognac",
+      "Hardware": "Brushed gold",
+      "Closure": "Dual zipper",
+      "Capacity": "Fits up to 13 inch laptop",
+      "Warranty": "6 Months"
+    }
+  },
+  {
+    "id": "pf-raffia-summer-tote",
+    "url": "#",
+    "title": "PuaFeli Raffia Summer Tote",
+    "description": "A breezy woven tote with tan handles and a drawstring pouch, made for beach days, market mornings, and travel styling.",
+    "price": "740.00 DHs",
+    "images": [
+      "/assets/bags/raffia-summer-tote.png"
+    ],
+    "specs": {
+      "Category": "Tote Bags",
+      "Brand": "PuaFeli",
+      "Material": "Natural raffia with vegan leather handles",
+      "Color": "Natural",
+      "Hardware": "Gold tone",
+      "Closure": "Interior drawstring pouch",
+      "Care": "Spot clean only",
+      "Warranty": "6 Months"
+    },
+    "promotion": true,
+    "discountPrice": "650.00 DHs"
+  },
+  {
+    "id": "pf-champagne-clutch",
+    "url": "#",
+    "title": "PuaFeli Champagne Evening Clutch",
+    "description": "A satin-finish mini clutch with a detachable chain strap and polished frame, sized for phone, cards, keys, and lipstick.",
+    "price": "560.00 DHs",
+    "images": [
+      "/assets/bags/champagne-clutch.png"
+    ],
+    "specs": {
+      "Category": "Clutches",
+      "Brand": "PuaFeli",
+      "Material": "Satin vegan leather",
+      "Color": "Champagne",
+      "Hardware": "Polished gold",
+      "Closure": "Kiss-lock frame",
+      "Strap": "Detachable chain",
+      "Warranty": "6 Months"
+    },
+    "promotion": true,
+    "discountPrice": "490.00 DHs"
+  },
+  {
+    "id": "pf-strap-kit",
+    "url": "#",
+    "title": "PuaFeli Adjustable Strap Kit",
+    "description": "A cream replacement strap with gold clips for refreshing your tote, crossbody, or travel bag.",
+    "price": "180.00 DHs",
+    "images": [
+      "/assets/bags/canvas-tote-set.png"
     ],
     "specs": {
       "Category": "Accessories",
-      "Brand": "Apple",
-      "Type": "Audio"
-    },
-    "promotion": true,
-    "discountPrice": "2,499.00 DHs"
-  },
-  {
-    "id": "sony-wh1000xm5",
-    "url": "#",
-    "title": "Sony WH-1000XM5",
-    "description": "Industry-leading noise cancellation. Exceptional sound quality and superior comfort for all-day listening.",
-    "price": "3,899.00 DHs",
-    "images": [
-      "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&q=80&w=800"
-    ],
-    "specs": {
-      "Category": "Accessories",
-      "Brand": "Sony",
-      "Type": "Audio"
-    }
-  },
-  {
-    "id": "anker-usb-c-cable",
-    "url": "#",
-    "title": "Anker Powerline III USB-C Cable",
-    "description": "Ultra-durable 100W fast charging cable. Built to last with reinforced stress points.",
-    "price": "199.00 DHs",
-    "images": [
-      "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800"
-    ],
-    "specs": {
-      "Category": "Complementaries",
-      "Brand": "Anker",
-      "Type": "Cables"
-    }
-  },
-  {
-    "id": "apple-20w-charger",
-    "url": "#",
-    "title": "Apple 20W USB-C Power Adapter",
-    "description": "Fast, efficient charging at home, in the office, or on the go.",
-    "price": "249.00 DHs",
-    "images": [
-      "https://images.unsplash.com/photo-1606012499144-b0d59e86baeb?auto=format&fit=crop&q=80&w=800"
-    ],
-    "specs": {
-      "Category": "Complementaries",
-      "Brand": "Apple",
-      "Type": "Chargers"
-    }
-  },
-  {
-    "id": "logitech-mx-master-3s",
-    "url": "#",
-    "title": "Logitech MX Master 3S",
-    "description": "An iconic mouse remastered for ultimate tactility, performance, and flow.",
-    "price": "1,199.00 DHs",
-    "images": [
-      "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&q=80&w=800"
-    ],
-    "specs": {
-      "Category": "Accessories",
-      "Brand": "Logitech",
-      "Type": "Peripherals"
+      "Brand": "PuaFeli",
+      "Material": "Vegan leather",
+      "Color": "Cream",
+      "Hardware": "Gold clips",
+      "Length": "Adjustable",
+      "Warranty": "3 Months"
     }
   }
 ]

@@ -1,15 +1,15 @@
 {
   "socialLinks": {
-    "facebook": "https://www.facebook.com/pcparadiseofficial",
-    "instagram": "https://www.instagram.com/pcparadise.officiel/",
+    "facebook": "https://www.facebook.com/puafeli",
+    "instagram": "https://www.instagram.com/puafeli.bags/",
     "whatsapp": "212610010182"
   },
   "aboutUs": {
-    "mainImage": "https://images.unsplash.com/photo-1531297172864-dd34cce46ad9?auto=format&fit=crop&q=80&w=800",
-    "description": "PC Paradise was founded with a singular vision: to curate the best premium technology products and provide an unparalleled shopping experience."
+    "mainImage": "/assets/bags/canvas-tote-set.png",
+    "description": "PuaFeli curates polished bags for daily movement: structured totes, compact crossbodies, refined clutches, and travel-ready accessories selected for texture, function, and quiet elegance."
   },
   "seo": {
-    "defaultTitle": "PC Paradise | Premium Laptops & Electronics",
-    "defaultDescription": "Your one-stop destination for quality laptops and computers in Morocco."
+    "defaultTitle": "PuaFeli Bags | Premium Handbags in Morocco",
+    "defaultDescription": "Shop elegant tote bags, crossbody bags, backpacks, clutches, and accessories with WhatsApp ordering and delivery in Morocco."
   }
 }
