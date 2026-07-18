@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - staging
+  workflow_dispatch:
 
 jobs:
   validate:
@@ -40,8 +41,8 @@ jobs:
       - name: Trigger Coolify production deploy
         run: |
           if [ -z "${{ secrets.COOLIFY_WEBHOOK_PROD }}" ] || [ -z "${{ secrets.COOLIFY_TOKEN_PROD }}" ]; then
-            echo "COOLIFY_WEBHOOK_PROD or COOLIFY_TOKEN_PROD is not set. Skipping production deploy."
-            exit 0
+            echo "::error::COOLIFY_WEBHOOK_PROD or COOLIFY_TOKEN_PROD is not set."
+            exit 1
           fi
           curl --fail --silent --show-error --max-time 30 \
             -H "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN_PROD }}" \
@@ -55,8 +56,8 @@ jobs:
       - name: Trigger Coolify staging deploy
         run: |
           if [ -z "${{ secrets.COOLIFY_WEBHOOK_STAGING }}" ] || [ -z "${{ secrets.COOLIFY_TOKEN_STAGING }}" ]; then
-            echo "COOLIFY_WEBHOOK_STAGING or COOLIFY_TOKEN_STAGING is not set. Skipping staging deploy."
-            exit 0
+            echo "::error::COOLIFY_WEBHOOK_STAGING or COOLIFY_TOKEN_STAGING is not set."
+            exit 1
           fi
           curl --fail --silent --show-error --max-time 30 \
             -H "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN_STAGING }}" \
