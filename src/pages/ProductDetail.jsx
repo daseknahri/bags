@@ -5,6 +5,7 @@ import { ShoppingCart, ArrowLeft, Heart, Shield, Truck, RotateCcw, ChevronLeft, 
 import { useTranslation } from 'react-i18next';
 import { api } from '../api';
 import { useCart } from '../context/CartContext';
+import Product3DViewer from '../components/three/Product3DViewer';
 import './ProductDetail.css';
 
 const ProductDetail = () => {
@@ -15,6 +16,7 @@ const ProductDetail = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
     const [addedToast, setAddedToast] = useState(false);
+    const [mediaMode, setMediaMode] = useState('3d');
     const { addItem } = useCart();
 
     useEffect(() => {
@@ -58,7 +60,7 @@ const ProductDetail = () => {
         return (
             <div className="loading-state container">
                 <div className="loading-spinner" />
-                Loading product...
+                {t('product.loading')}
             </div>
         );
     }
@@ -84,33 +86,44 @@ const ProductDetail = () => {
 
             <div className="product-detail-grid">
                 <div className="product-gallery">
-                    <button className="main-image-container" onClick={() => openLightbox(images.indexOf(mainImage))}>
-                        {product.promotion && <div className="detail-promo-badge">{t('product.promo')}</div>}
-                        <img
-                            src={api.resolveMediaUrl(mainImage)}
-                            alt={product.title}
-                            onError={(event) => { event.currentTarget.src = 'https://placehold.co/700x700?text=Bag'; }}
-                        />
-                        <span className="zoom-hint"><ZoomIn size={18} /> {t('product.clickToZoom')}</span>
-                    </button>
+                    <div className="media-mode-toggle">
+                        <button type="button" className={`media-mode-btn ${mediaMode === '3d' ? 'active' : ''}`} onClick={() => setMediaMode('3d')}>🔄 {t('product.view3d')}</button>
+                        <button type="button" className={`media-mode-btn ${mediaMode === 'photos' ? 'active' : ''}`} onClick={() => setMediaMode('photos')}>🖼️ {t('product.photos')}</button>
+                    </div>
 
-                    {images.length > 1 && (
-                        <div className="thumbnail-list">
-                            {images.map((img, idx) => (
-                                <button
-                                    key={img}
-                                    className={`thumbnail-btn ${mainImage === img ? 'active' : ''}`}
-                                    onClick={() => setMainImage(img)}
-                                    aria-label={`View image ${idx + 1}`}
-                                >
-                                    <img
-                                        src={api.resolveMediaUrl(img)}
-                                        alt={`${product.title} view ${idx + 1}`}
-                                        onError={(event) => { event.currentTarget.src = 'https://placehold.co/100x100?text=Bag'; }}
-                                    />
-                                </button>
-                            ))}
-                        </div>
+                    {mediaMode === '3d' ? (
+                        <Product3DViewer product={product} />
+                    ) : (
+                        <>
+                            <button className="main-image-container" onClick={() => openLightbox(images.indexOf(mainImage))}>
+                                {product.promotion && <div className="detail-promo-badge">{t('product.promo')}</div>}
+                                <img
+                                    src={api.resolveMediaUrl(mainImage)}
+                                    alt={product.title}
+                                    onError={(event) => { event.currentTarget.src = 'https://placehold.co/700x700?text=Bag'; }}
+                                />
+                                <span className="zoom-hint"><ZoomIn size={18} /> {t('product.clickToZoom')}</span>
+                            </button>
+
+                            {images.length > 1 && (
+                                <div className="thumbnail-list">
+                                    {images.map((img, idx) => (
+                                        <button
+                                            key={img}
+                                            className={`thumbnail-btn ${mainImage === img ? 'active' : ''}`}
+                                            onClick={() => setMainImage(img)}
+                                            aria-label={`View image ${idx + 1}`}
+                                        >
+                                            <img
+                                                src={api.resolveMediaUrl(img)}
+                                                alt={`${product.title} view ${idx + 1}`}
+                                                onError={(event) => { event.currentTarget.src = 'https://placehold.co/100x100?text=Bag'; }}
+                                            />
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </>
                     )}
                 </div>
 
@@ -141,20 +154,20 @@ const ProductDetail = () => {
                         <button className={`btn-primary main-action ${addedToast ? 'added' : ''}`} onClick={handleAdd}>
                             {addedToast ? <><Check size={20} /> {t('product.added')}</> : <><ShoppingCart size={20} /> {t('product.addToCart')}</>}
                         </button>
-                        <button className="icon-btn wishlist-btn" title="Add to wishlist" aria-label="Add to wishlist">
+                        <button className="icon-btn wishlist-btn" title={t('product.addToWishlist')} aria-label={t('product.addToWishlist')}>
                             <Heart size={22} />
                         </button>
                     </div>
 
                     <div className="feature-list">
-                        <div className="feature-item"><Shield size={18} className="feature-icon" /><span>Quality checked before dispatch</span></div>
-                        <div className="feature-item"><Truck size={18} className="feature-icon" /><span>Delivery available across Morocco</span></div>
-                        <div className="feature-item"><RotateCcw size={18} className="feature-icon" /><span>Exchange support within 7 days</span></div>
+                        <div className="feature-item"><Shield size={18} className="feature-icon" /><span>{t('product.qualityChecked')}</span></div>
+                        <div className="feature-item"><Truck size={18} className="feature-icon" /><span>{t('product.deliveryMorocco')}</span></div>
+                        <div className="feature-item"><RotateCcw size={18} className="feature-icon" /><span>{t('product.exchange7days')}</span></div>
                     </div>
 
                     {Object.keys(product.specs || {}).length > 0 && (
                         <div className="specs-section">
-                            <h3>Product Details</h3>
+                            <h3>{t('product.details')}</h3>
                             <div className="specs-grid">
                                 {Object.entries(product.specs).map(([key, value]) => (
                                     <div key={key} className="spec-item">

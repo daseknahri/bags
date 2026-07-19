@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { api } from '../api';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import './Blog.css';
 
 const BlogPost = () => {
+    const { t } = useTranslation();
     const { slug } = useParams();
     const [post, setPost] = useState(null);
 
@@ -13,7 +15,7 @@ const BlogPost = () => {
         api.getBlog(slug).then(p => setPost(p));
     }, [slug]);
 
-    if (!post) return <div className="container loading">Loading post...</div>;
+    if (!post) return <div className="container loading">{t('blog.loading')}</div>;
 
     return (
         <div className="blog-post-page container animate-fade-in">
@@ -25,7 +27,7 @@ const BlogPost = () => {
             </Helmet>
 
             <Link to="/blog" className="back-link">
-                <ArrowLeft size={16} /> Back to Blog
+                <ArrowLeft size={16} /> {t('blog.backToBlog')}
             </Link>
 
             <article className="post-article glass-panel">

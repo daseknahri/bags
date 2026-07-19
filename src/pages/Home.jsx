@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Truck, ShieldCheck } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import ProductCard from '../components/ProductCard';
+import Hero3D from '../components/three/Hero3D';
 import { api } from '../api';
 import './Home.css';
 
@@ -54,10 +55,10 @@ const Home = () => {
 
             <section className="hero">
                 <div className="hero-media" aria-hidden="true">
-                    <img src="/assets/bags/canvas-tote-set.png" alt="" />
+                    <Hero3D color="#a97b4f" />
                 </div>
                 <div className="hero-copy animate-fade-in">
-                    <p className="hero-kicker">New collection</p>
+                    <p className="hero-kicker">{t('home.newCollection')}</p>
                     <h1>{t('hero.welcome')}</h1>
                     <p className="hero-subtitle">{t('hero.subtitle')}</p>
                     <div className="hero-actions">
@@ -71,15 +72,15 @@ const Home = () => {
 
             <section className="assurance-band">
                 <div className="container assurance-grid">
-                    <div><Sparkles size={20} /><span>Curated finishes</span></div>
-                    <div><Truck size={20} /><span>Delivery across Morocco</span></div>
-                    <div><ShieldCheck size={20} /><span>Warranty on every piece</span></div>
+                    <div><Sparkles size={20} /><span>{t('home.curated')}</span></div>
+                    <div><Truck size={20} /><span>{t('home.delivery')}</span></div>
+                    <div><ShieldCheck size={20} /><span>{t('home.warranty')}</span></div>
                 </div>
             </section>
 
             <section className="catalog-section container">
                 <div className="section-header">
-                    <p className="section-kicker">Shop by silhouette</p>
+                    <p className="section-kicker">{t('home.shopBy')}</p>
                     <h2>{t('catalog.featured')}</h2>
                     <div className="category-filters" aria-label="Filter featured products">
                         {categories.map((category) => (
@@ -95,7 +96,7 @@ const Home = () => {
                 </div>
 
                 {products.length === 0 ? (
-                    <div className="loading-state">Loading collection...</div>
+                    <div className="loading-state">{t('home.loadingCollection')}</div>
                 ) : (
                     <div className="product-grid">
                         {visibleProducts.map((product) => (
@@ -108,13 +109,10 @@ const Home = () => {
             <section className="story-strip">
                 <div className="container story-grid">
                     <div>
-                        <p className="section-kicker">Material first</p>
-                        <h2>Quiet pieces that carry the whole day.</h2>
+                        <p className="section-kicker">{t('home.materialFirst')}</p>
+                        <h2>{t('home.storyTitle')}</h2>
                     </div>
-                    <p>
-                        Kago Bags focuses on shape, texture, and practical details: easy closures, polished hardware,
-                        comfortable straps, and colors that move cleanly between work, travel, and evening plans.
-                    </p>
+                    <p>{t('home.storyBody')}</p>
                 </div>
             </section>
         </div>

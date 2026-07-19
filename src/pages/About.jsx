@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { api } from '../api';
 import './About.css';
 
 const About = () => {
+    const { t } = useTranslation();
     const [aboutUs, setAboutUs] = useState({
         mainImage: '/assets/bags/canvas-tote-set.png',
-        description: 'Kago Bags curates polished bags for daily movement: structured totes, compact crossbodies, refined clutches, and travel-ready accessories selected for texture, function, and quiet elegance.'
+        description: ''
     });
 
     useEffect(() => {
@@ -22,19 +24,16 @@ const About = () => {
     return (
         <div className="about-page container animate-fade-in">
             <div className="about-hero">
-                <p className="about-kicker">Kago Bags studio</p>
-                <h1>Designed around the way you move.</h1>
-                <p>Calm silhouettes, useful capacity, and finishes that make daily outfits feel complete.</p>
+                <p className="about-kicker">{t('about.kicker')}</p>
+                <h1>{t('about.title')}</h1>
+                <p>{t('about.subtitle')}</p>
             </div>
 
             <div className="about-content">
                 <div className="about-text">
-                    <h2>Our Point Of View</h2>
-                    <p>{aboutUs.description}</p>
-                    <p>
-                        Every piece is selected for practical carry, clean construction, and easy styling.
-                        We focus on bags that look polished in photos and still work hard in real life.
-                    </p>
+                    <h2>{t('about.povTitle')}</h2>
+                    <p>{aboutUs.description || t('about.description')}</p>
+                    <p>{t('about.para2')}</p>
                 </div>
 
                 <div className="about-image">
@@ -47,16 +46,16 @@ const About = () => {
 
             <div className="values-grid">
                 <div className="value-card">
-                    <h3>Material Led</h3>
-                    <p>Canvas, raffia, satin, and pebbled textures chosen for depth and daily resilience.</p>
+                    <h3>{t('about.value1Title')}</h3>
+                    <p>{t('about.value1Body')}</p>
                 </div>
                 <div className="value-card">
-                    <h3>Easy Ordering</h3>
-                    <p>Add pieces to the cart and send a WhatsApp order for availability and delivery details.</p>
+                    <h3>{t('about.value2Title')}</h3>
+                    <p>{t('about.value2Body')}</p>
                 </div>
                 <div className="value-card">
-                    <h3>Client Ready</h3>
-                    <p>Clean product pages, local imagery, and editable admin content for a real handoff.</p>
+                    <h3>{t('about.value3Title')}</h3>
+                    <p>{t('about.value3Body')}</p>
                 </div>
             </div>
         </div>

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { api } from '../api';
 import { Calendar, User } from 'lucide-react';
 import './Blog.css';
 
 const Blog = () => {
+    const { t } = useTranslation();
     const [blogs, setBlogs] = useState([]);
     const [seo, setSeo] = useState({ defaultTitle: 'Kago Bags', defaultDescription: 'Bag styling notes and buying guides.' });
 
@@ -32,8 +34,8 @@ const Blog = () => {
             </Helmet>
 
             <div className="blog-header">
-                <h1>Kago Bags <span className="accent">Journal</span></h1>
-                <p>Styling notes, care tips, and practical guides for choosing your next bag.</p>
+                <h1>Kago Bags <span className="accent">{t('blog.journal')}</span></h1>
+                <p>{t('blog.subtitle')}</p>
             </div>
 
             <div className="blog-grid">
@@ -49,13 +51,13 @@ const Blog = () => {
                                 <span className="meta-item"><User size={14} /> {post.author}</span>
                             </div>
                             <p>{post.excerpt}</p>
-                            <span className="read-more">Read article</span>
+                            <span className="read-more">{t('blog.readMore')}</span>
                         </div>
                     </Link>
                 ))}
                 {blogs.length === 0 && (
                     <div className="no-blogs">
-                        <h3>No posts yet. Check back soon.</h3>
+                        <h3>{t('blog.noPosts')}</h3>
                     </div>
                 )}
             </div>

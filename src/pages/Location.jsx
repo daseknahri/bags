@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Phone, Mail, Clock, Map } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { api } from '../api';
 import './Location.css';
 
 const LocationPage = () => {
+    const { t } = useTranslation();
     const [contact, setContact] = useState(null);
 
     useEffect(() => {
@@ -23,8 +25,8 @@ const LocationPage = () => {
     return (
         <div className="location-page container animate-fade-in">
             <div className="location-hero">
-                <h1>Visit <span className="accent">Our Store</span></h1>
-                <p>Book a bag viewing, confirm availability, or arrange delivery across Morocco.</p>
+                <h1>{t('location.visit')} <span className="accent">{t('location.ourStore')}</span></h1>
+                <p>{t('location.subtitle')}</p>
             </div>
 
             <div className="location-content">
@@ -35,7 +37,7 @@ const LocationPage = () => {
                             <MapPin size={24} />
                         </div>
                         <div>
-                            <h3>Address</h3>
+                            <h3>{t('location.address')}</h3>
                             <p>{address}</p>
                         </div>
                     </div>
@@ -45,7 +47,7 @@ const LocationPage = () => {
                             <Phone size={24} />
                         </div>
                         <div>
-                            <h3>Phone</h3>
+                            <h3>{t('location.phone')}</h3>
                             <p>{phone1} <br /> {phone2 && phone2}</p>
                         </div>
                     </div>
@@ -55,7 +57,7 @@ const LocationPage = () => {
                             <Mail size={24} />
                         </div>
                         <div>
-                            <h3>Email</h3>
+                            <h3>{t('location.email')}</h3>
                             <p>{email1} <br /> {email2 && email2}</p>
                         </div>
                     </div>
@@ -65,7 +67,7 @@ const LocationPage = () => {
                             <Clock size={24} />
                         </div>
                         <div>
-                            <h3>Hours</h3>
+                            <h3>{t('location.hours')}</h3>
                             <p>{hours}</p>
                         </div>
                     </div>

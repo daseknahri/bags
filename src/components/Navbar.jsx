@@ -16,6 +16,9 @@ const navItems = [
     ['/location', 'nav.location']
 ];
 
+const LANGS = ['fr', 'en', 'ar'];
+const LANG_LABEL = { fr: 'FR', en: 'EN', ar: 'ع' };
+
 const Navbar = () => {
     const { t, i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
@@ -25,10 +28,10 @@ const Navbar = () => {
 
     if (location.pathname.startsWith('/admin')) return null;
 
-    const toggleLanguage = () => {
-        const newLang = i18n.language.startsWith('fr') ? 'en' : 'fr';
-        i18n.changeLanguage(newLang);
-        document.documentElement.lang = newLang;
+    const currentLang = LANGS.find((l) => i18n.language?.startsWith(l)) || 'fr';
+    const nextLang = LANGS[(LANGS.indexOf(currentLang) + 1) % LANGS.length];
+    const cycleLanguage = () => {
+        i18n.changeLanguage(nextLang);
     };
 
     return (
@@ -56,8 +59,8 @@ const Navbar = () => {
                         <Link className="icon-btn" aria-label="Search collection" title="Search collection" to="/catalog">
                             <Search size={19} />
                         </Link>
-                        <button className="lang-switch" aria-label="Change language" onClick={toggleLanguage}>
-                            {i18n.language.startsWith('fr') ? 'EN' : 'FR'}
+                        <button className="lang-switch" aria-label="Change language" title={`Change language → ${LANG_LABEL[nextLang]}`} onClick={cycleLanguage}>
+                            {LANG_LABEL[nextLang]}
                         </button>
                         <button
                             className="icon-btn cart-btn"

@@ -48,7 +48,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                     <div className="cart-empty">
                         <ShoppingBag size={56} className="empty-icon" />
                         <h3>{t('cart.empty')}</h3>
-                        <p>Save your favorite Kago Bags pieces here before sending the order.</p>
+                        <p>{t('cart.emptyHint')}</p>
                         <Link to="/catalog" className="btn-primary" onClick={onClose}>
                             {t('cart.browse')}
                         </Link>

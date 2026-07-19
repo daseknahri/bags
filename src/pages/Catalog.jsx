@@ -72,7 +72,7 @@ const Catalog = () => {
             </Helmet>
 
             <div className="catalog-header">
-                <p className="catalog-kicker">Kago Bags collection</p>
+                <p className="catalog-kicker">{t('catalog.kicker')}</p>
                 <h1>{t('catalog.fullCatalog')}</h1>
                 <p>{t('catalog.explore')}</p>
             </div>
