@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { api } from '../api';
 import { Plus, Edit2, Trash2, X, Check } from 'lucide-react';
 
@@ -126,8 +127,8 @@ const AdminBlogs = () => {
                 </table>
             </div>
 
-            {isModalOpen && (
-                <div className="admin-modal-overlay">
+            {isModalOpen && createPortal(
+                <div className="admin-modal-overlay" onClick={(e) => { if (e.target.className === 'admin-modal-overlay') handleCloseModal(); }}>
                     <div className="admin-modal glass-panel">
                         <div className="modal-header">
                             <h2>{editingId ? 'Edit Post' : 'New Post'}</h2>
@@ -183,7 +184,8 @@ const AdminBlogs = () => {
                             </div>
                         </form>
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </div>
     );

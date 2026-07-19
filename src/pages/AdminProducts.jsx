@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { api } from '../api';
 import { Plus, Edit2, Trash2, X, Image, Tag, Check } from 'lucide-react';
 import './AdminProducts.css';
@@ -196,8 +197,8 @@ const AdminProducts = () => {
                 {filtered.length === 0 && <p style={{ color: 'var(--text-main)' }}>No products found.</p>}
             </div>
 
-            {/* Edit / Add Modal */}
-            {isModalOpen && (
+            {/* Edit / Add Modal (portaled to body so the fixed overlay is not trapped by the animated container's transform) */}
+            {isModalOpen && createPortal(
                 <div className="admin-modal-overlay" onClick={(e) => { if (e.target.className === 'admin-modal-overlay') handleCloseModal(); }}>
                     <div className="admin-modal glass-panel product-modal">
                         <div className="modal-header">
@@ -311,7 +312,8 @@ const AdminProducts = () => {
                             </div>
                         </form>
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </div>
     );
