@@ -5,7 +5,6 @@ import { ShoppingCart, ArrowLeft, Heart, Shield, Truck, RotateCcw, ChevronLeft, 
 import { useTranslation } from 'react-i18next';
 import { api } from '../api';
 import { useCart } from '../context/CartContext';
-import Product3DViewer from '../components/three/Product3DViewer';
 import './ProductDetail.css';
 
 const ProductDetail = () => {
@@ -16,7 +15,6 @@ const ProductDetail = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
     const [addedToast, setAddedToast] = useState(false);
-    const [mediaMode, setMediaMode] = useState('3d');
     const { addItem } = useCart();
 
     useEffect(() => {
@@ -86,44 +84,33 @@ const ProductDetail = () => {
 
             <div className="product-detail-grid">
                 <div className="product-gallery">
-                    <div className="media-mode-toggle">
-                        <button type="button" className={`media-mode-btn ${mediaMode === '3d' ? 'active' : ''}`} onClick={() => setMediaMode('3d')}>🔄 {t('product.view3d')}</button>
-                        <button type="button" className={`media-mode-btn ${mediaMode === 'photos' ? 'active' : ''}`} onClick={() => setMediaMode('photos')}>🖼️ {t('product.photos')}</button>
-                    </div>
+                    <button className="main-image-container" onClick={() => openLightbox(images.indexOf(mainImage))}>
+                        {product.promotion && <div className="detail-promo-badge">{t('product.promo')}</div>}
+                        <img
+                            src={api.resolveMediaUrl(mainImage)}
+                            alt={product.title}
+                            onError={(event) => { event.currentTarget.src = 'https://placehold.co/700x700?text=Bag'; }}
+                        />
+                        <span className="zoom-hint"><ZoomIn size={18} /> {t('product.clickToZoom')}</span>
+                    </button>
 
-                    {mediaMode === '3d' ? (
-                        <Product3DViewer product={product} />
-                    ) : (
-                        <>
-                            <button className="main-image-container" onClick={() => openLightbox(images.indexOf(mainImage))}>
-                                {product.promotion && <div className="detail-promo-badge">{t('product.promo')}</div>}
-                                <img
-                                    src={api.resolveMediaUrl(mainImage)}
-                                    alt={product.title}
-                                    onError={(event) => { event.currentTarget.src = 'https://placehold.co/700x700?text=Bag'; }}
-                                />
-                                <span className="zoom-hint"><ZoomIn size={18} /> {t('product.clickToZoom')}</span>
-                            </button>
-
-                            {images.length > 1 && (
-                                <div className="thumbnail-list">
-                                    {images.map((img, idx) => (
-                                        <button
-                                            key={img}
-                                            className={`thumbnail-btn ${mainImage === img ? 'active' : ''}`}
-                                            onClick={() => setMainImage(img)}
-                                            aria-label={`View image ${idx + 1}`}
-                                        >
-                                            <img
-                                                src={api.resolveMediaUrl(img)}
-                                                alt={`${product.title} view ${idx + 1}`}
-                                                onError={(event) => { event.currentTarget.src = 'https://placehold.co/100x100?text=Bag'; }}
-                                            />
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
-                        </>
+                    {images.length > 1 && (
+                        <div className="thumbnail-list">
+                            {images.map((img, idx) => (
+                                <button
+                                    key={img}
+                                    className={`thumbnail-btn ${mainImage === img ? 'active' : ''}`}
+                                    onClick={() => setMainImage(img)}
+                                    aria-label={`View image ${idx + 1}`}
+                                >
+                                    <img
+                                        src={api.resolveMediaUrl(img)}
+                                        alt={`${product.title} view ${idx + 1}`}
+                                        onError={(event) => { event.currentTarget.src = 'https://placehold.co/100x100?text=Bag'; }}
+                                    />
+                                </button>
+                            ))}
+                        </div>
                     )}
                 </div>
 

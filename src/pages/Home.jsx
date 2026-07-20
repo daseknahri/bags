@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Truck, ShieldCheck } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import ProductCard from '../components/ProductCard';
-import Hero3D from '../components/three/Hero3D';
 import { api } from '../api';
 import './Home.css';
 
@@ -55,7 +54,7 @@ const Home = () => {
 
             <section className="hero">
                 <div className="hero-media" aria-hidden="true">
-                    <Hero3D color="#a97b4f" />
+                    <img src="/assets/bags/kg-scarf-taupe.jpg" alt="" />
                 </div>
                 <div className="hero-copy animate-fade-in">
                     <p className="hero-kicker">{t('home.newCollection')}</p>
