@@ -117,6 +117,12 @@ const resources = {
                 noPosts: "No posts yet. Check back soon.",
                 loading: "Loading post...",
                 backToBlog: "Back to Blog"
+            },
+            footer: {
+                tagline: "Premium bags, curated in Morocco with fast WhatsApp ordering.",
+                quickLinks: "Quick links",
+                follow: "Follow us",
+                rights: "All rights reserved."
             }
         }
     },
@@ -234,6 +240,12 @@ const resources = {
                 noPosts: "Aucun article pour le moment. Revenez bientot.",
                 loading: "Chargement de l'article...",
                 backToBlog: "Retour au journal"
+            },
+            footer: {
+                tagline: "Sacs premium, selectionnes au Maroc avec commande rapide sur WhatsApp.",
+                quickLinks: "Liens rapides",
+                follow: "Suivez-nous",
+                rights: "Tous droits reserves."
             }
         }
     },
@@ -351,6 +363,12 @@ const resources = {
                 noPosts: "لا توجد مقالات بعد. عد قريباً.",
                 loading: "جاري تحميل المقال...",
                 backToBlog: "العودة إلى المجلة"
+            },
+            footer: {
+                tagline: "حقائب فاخرة، مختارة في المغرب مع طلب سريع عبر واتساب.",
+                quickLinks: "روابط سريعة",
+                follow: "تابعونا",
+                rights: "جميع الحقوق محفوظة."
             }
         }
     }

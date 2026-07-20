@@ -10,6 +10,7 @@ import LocationPage from './pages/Location';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import AdminPanel from './pages/AdminPanel';
+import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/admin/*" element={<AdminPanel />} />
         </Routes>
       </main>
+      <Footer />
       <FloatingWhatsApp />
     </BrowserRouter>
   );
