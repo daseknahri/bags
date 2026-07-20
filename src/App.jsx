@@ -11,7 +11,7 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import AdminPanel from './pages/AdminPanel';
 import Footer from './components/Footer';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
+import FloatingSocial from './components/FloatingSocial';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingSocial />
     </BrowserRouter>
   );
 }
