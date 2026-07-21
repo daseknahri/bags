@@ -42,8 +42,8 @@ const Home = () => {
     }, [products]);
 
     const visibleProducts = activeCategory === 'All'
-        ? products.slice(0, 6)
-        : products.filter((product) => product.specs?.Category === activeCategory).slice(0, 6);
+        ? products
+        : products.filter((product) => product.specs?.Category === activeCategory);
 
     return (
         <div className="home-page">
